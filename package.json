@@ -1,0 +1,41 @@
+{
+  "name": "nodeservice",
+  "version": "1.0.0",
+  "description": "A project to testing some packages and pratice some concepts",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "start:prod": "npm run build && node ./dist/app.js",
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npm run pretty && npx eslint src/**/*.ts",
+    "lint:fix": "npx eslint src/**/*.ts --fix",
+    "pretty": "prettier --write src/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mknparreira/nodeservice.git"
+  },
+  "author": "Maikon Parreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mknparreira/nodeservice/issues"
+  },
+  "homepage": "https://github.com/mknparreira/nodeservice#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.17",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
