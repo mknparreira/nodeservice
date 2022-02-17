@@ -6,7 +6,7 @@ Skeleton for Node.js applications written in TypeScript
 ## Roadmap
 This project will be divided by phases.
 1. Instalation & Configuration **(done)**
-2. Organization **(progress)**
+2. Project Structure **(progress)**
 3. Fake data
 4. Modules + Documentation (open API) + Unit & Integration Test Cases + Logs + Debug right way
 5. Database 
@@ -14,15 +14,15 @@ This project will be divided by phases.
 # 1 - Instalation & Configuration
 ## Features
 - Quick start
-- Integrated EsLint and Prettier (with their plugins)
--  Added Express
+- Integrated Lint and Code Style --- ESLint and Prettier (with their plugins)
+- Added Express
 - Added TypeScript
 - Added Nodemon + Ts Node
 ## Packages installed
 - [Express](https://expressjs.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Nodemon](https://nodemon.io/)
-- [EsLint](https://eslint.org/)
+- [ESLint](https://eslint.org/)
 - [Ts Node](https://github.com/TypeStrong/ts-node)
 - [Prettier](https://prettier.io/)
 - [Eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
@@ -47,17 +47,18 @@ npm i ts-node -D
 npm i nodemon -D
 ```
 
-Eslint
+ESLint
 > How would you like to use ESLint?: **To check syntax and find problems**
 > What type of modules does your project use?: **JavaScript modules (import/export)**
 > Which framework does your project use?: **None of these**
 > Does your project use TypeScript?: **Yes**
 > Where does your code run?: **Node**
 > What format do you want your config file to be in?: **JSON**
-# 2 - Organization
+# 2 - Project Structure 
 ## Features
-- Added dotenv and config packages.
+- Integrated dotenv and config packages.
 - Global Enviroment Object
+- Structure by components
 ## Packages installed
 - [Config](https://github.com/node-config/node-config)
 - [Dotenv](https://github.com/motdotla/dotenv)
