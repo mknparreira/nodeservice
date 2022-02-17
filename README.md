@@ -7,8 +7,8 @@ Skeleton for Node.js applications written in TypeScript
 This project will be divided by phases.
 1. Instalation & Configuration **(done)**
 2. Project Structure **(progress)**
-3. Fake data
-4. Modules + Documentation (open API) + Unit & Integration Test Cases + Logs + Debug right way
+3. Add Mock data
+4. Components + Documentation (open API) + Unit & Integration Test Cases + Logs + Debug right way
 5. Database 
 6. Authorization + Roles & Permissions + Security
 # 1 - Instalation & Configuration
@@ -27,6 +27,7 @@ This project will be divided by phases.
 - [Prettier](https://prettier.io/)
 - [Eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
 - [Eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
+- [Eslint-plugin-node](https://github.com/prettier/eslint-plugin-node)
 - @typescript-eslint/parser
 - @typescript-eslint/eslint-plugin
 - @types/node
@@ -45,15 +46,18 @@ npm i eslint eslint-config-prettier eslint-plugin-prettier @typescript-eslint/pa
 npx eslint --init
 npm i ts-node -D
 npm i nodemon -D
+npm i eslint-plugin-node -D
 ```
 
 ESLint
-> How would you like to use ESLint?: **To check syntax and find problems**
-> What type of modules does your project use?: **JavaScript modules (import/export)**
-> Which framework does your project use?: **None of these**
-> Does your project use TypeScript?: **Yes**
-> Where does your code run?: **Node**
-> What format do you want your config file to be in?: **JSON**
+```bash
+How would you like to use ESLint?: **To check syntax and find problems**
+What type of modules does your project use?: **JavaScript modules (import/export)**
+Which framework does your project use?: **None of these**
+Does your project use TypeScript?: **Yes**
+Where does your code run?: **Node**
+What format do you want your config file to be in?: **JSON**
+```
 # 2 - Project Structure 
 ## Features
 - Integrated dotenv and config packages.
@@ -64,16 +68,16 @@ ESLint
 - [Dotenv](https://github.com/motdotla/dotenv)
 - @types/config
 - @types/dotenv
-# 3 - Fake data
+# 3 - Mock data
 ## Features
 - Coming Soon
 ## Packages installed
 Coming soon
-# 4 - Modules + Documentation (Open API) + Unit & Integration Test Cases + Logs + Debug right way
+# 4 - Components + Documentation (Open API) + Unit & Integration Test Cases + Logs + Debug right way
 ## Features
 - Integrated Winston Logger
 - Integrated Open API
-- Creating first modules with TDD
+- Creating first component with TDD
 - Common Error Handler
 - Common Response Handler
 ## Packages installed
