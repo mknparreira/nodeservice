@@ -8,7 +8,7 @@
   "tabWidth": 4,
   "useTabs": true,
   "parser": "typescript",
-  "arrowParens": "always",
+  "arrowParens": "avoid",
   "requirePragma": true,
   "insertPragma": true,
   "endOfLine": "lf",
