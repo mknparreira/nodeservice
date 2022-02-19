@@ -37,7 +37,41 @@
         "no-underscore-dangle": "off",
         "arrow-body-style": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "selector": "default",
+                "format": [
+                    "camelCase"
+                ]
+            },
+            {
+                "selector": "variable",
+                "format": [
+                    "camelCase",
+                    "UPPER_CASE"
+                ]
+            },
+            {
+                "selector": "parameter",
+                "format": [
+                    "camelCase"
+                ],
+                "leadingUnderscore": "allow"
+            },
+            {
+                "selector": "typeLike",
+                "format": [
+                    "PascalCase"
+                ]
+            },
+            {
+                "selector": "function",
+                "format": [
+                    "PascalCase"
+                ]
+            }
+        ],
         "@typescript-eslint/no-explicit-any": 1,
         "@typescript-eslint/no-inferrable-types": [
             "warn",
@@ -66,7 +100,7 @@
         ],
         "node/file-extension-in-import": [
             "error",
-            "always"
+            "never"
         ],
         "node/prefer-global/buffer": [
             "error",
@@ -88,7 +122,26 @@
             "error",
             "always"
         ],
+        "node/no-unpublished-import": [
+            "error",
+            {
+                "allowModules": [
+                    "dotenv"
+                ]
+            }
+        ],
         "node/prefer-promises/dns": "error",
-        "node/prefer-promises/fs": "error"
+        "node/prefer-promises/fs": "error",
+        "node/no-missing-import": [
+            "error",
+            {
+                "allowModules": [],
+                "resolvePaths": [],
+                "tryExtensions": [
+                    ".js",
+                    ".ts"
+                ]
+            }
+        ]
     }
 }

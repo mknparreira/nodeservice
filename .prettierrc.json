@@ -11,5 +11,13 @@
   "arrowParens": "always",
   "requirePragma": true,
   "insertPragma": true,
-  "endOfLine": "lf"
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": "*.json",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }
