@@ -6,9 +6,9 @@ Skeleton for Node.js applications written in TypeScript
 ## Roadmap
 This project will be divided by phases.
 1. Instalation & Configuration **(done)**
-2. Project Structure **(progress)**
-3. Add Mock data
-4. Components + Documentation (open API) + Unit & Integration Test Cases + Logs + Debug right way
+2. Project Structure **(done)**
+3. Add Mock data + Log (Winston) **(progress)**
+4. Components + Documentation (open API) + Unit & Integration Test Cases +  Debug right way
 5. Database 
 6. Authorization + Roles & Permissions + Security
 # 1 - Instalation & Configuration
@@ -39,7 +39,7 @@ npm init, tsc init
 npm init -y
 npm i typescript -D
 npm i @types/node -D
-tsc --init (Gerar o ficheiro tsconfig.json)
+tsc --init (Create tsconfig.json file)
 npm i express
 npm i @types/express -D
 npm i eslint eslint-config-prettier eslint-plugin-prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin prettier -D
@@ -68,6 +68,13 @@ What format do you want your config file to be in?: **JSON**
 - [Dotenv](https://github.com/motdotla/dotenv)
 - @types/config
 - @types/dotenv
+
+```bash
+npm i dotenv -D
+npm i @types/dotenv -D
+npm i config
+npm i @types/config -D
+```
 # 3 - Mock data
 ## Features
 - Coming Soon
