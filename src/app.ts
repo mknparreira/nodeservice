@@ -13,6 +13,7 @@ const general: ConfigType = config.get('general');
 const app = express();
 
 //app.use(express.json());
+//app.user(cors());
 //app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {

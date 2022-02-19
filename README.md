@@ -7,10 +7,10 @@ Skeleton for Node.js applications written in TypeScript
 This project will be divided by phases.
 1. Instalation & Configuration **(done)**
 2. Project Structure **(done)**
-3. Add Mock data + Log (Winston) **(progress)**
-4. Components + Documentation (open API) + Unit & Integration Test Cases +  Debug right way
-5. Database 
-6. Authorization + Roles & Permissions + Security
+3. User component + API Documentation (Open API) + Unit Test Cases (Jest) + Debugging right way
+4. Database 
+5. Authorization + Roles & Permissions + Security
+6. Others issues
 # 1 - Instalation & Configuration
 ## Features
 - Quick start
@@ -75,12 +75,7 @@ npm i @types/dotenv -D
 npm i config
 npm i @types/config -D
 ```
-# 3 - Mock data
-## Features
-- Coming Soon
-## Packages installed
-Coming soon
-# 4 - Components + Documentation (Open API) + Unit & Integration Test Cases + Logs + Debug right way
+# 3 - User component + API Documentation (Open API) + Unit Test Cases (Jest) + Debugging right way
 ## Features
 - Integrated Winston Logger
 - Integrated Open API
@@ -92,13 +87,29 @@ Coming soon
 - [Winston Logger](https://github.com/winstonjs/winston)
 - @types/winston
 - @types/http-status-codes
-# 5 - Database
+# 4 - Database
 ## Features
 - Coming Soon
 ## Packages installed
 Coming soon
-# 6 - Authorization + Roles & Permissions + Security
+# 5 - Authorization + Roles & Permissions + Security
 ## Features
 - Coming Soon
+## Packages installed
+Coming soon
+# 6 - Others issues
+## Features
+- [Cache API Request with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7)
+- [Using Gzip Compression](https://github.com/expressjs/compression)
+The server can use gzip compression to reduce file sizes before sending them to a web browser. This will reduce latency and lag
+```javascript
+const express     = require('express');
+const compression = require('compression');
+const app         = express();
+app.use(compression())
+```
+- Cluster
+- [Publisher Subscriber Models (Pub/Sub)](https://faye.jcoglan.com/)
+
 ## Packages installed
 Coming soon
