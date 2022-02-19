@@ -36,3 +36,5 @@ typings/
 *.tgz
 
 dist/
+
+.env
