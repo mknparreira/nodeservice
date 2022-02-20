@@ -73,6 +73,9 @@
             }
         ],
         "@typescript-eslint/no-explicit-any": 1,
+        "@typescript-eslint/no-throw-literal": [
+            "error"
+        ],
         "@typescript-eslint/no-inferrable-types": [
             "warn",
             {
