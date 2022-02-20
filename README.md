@@ -7,7 +7,7 @@ Skeleton for Node.js applications written in TypeScript
 This project will be divided by phases.
 1. Instalation & Configuration **(done)**
 2. Project Structure **(done)**
-3. User component + API Documentation (Open API) + Unit Test Cases (Jest) + Debugging right way
+3. User component + API Documentation (Open API) + Unit Test Cases (Jest) + Winton logger + Debugging right way
 4. Database 
 5. Authorization + Roles & Permissions + Security
 6. Others issues
@@ -75,7 +75,7 @@ npm i @types/dotenv -D
 npm i config
 npm i @types/config -D
 ```
-# 3 - User component + API Documentation (Open API) + Unit Test Cases (Jest) + Debugging right way
+# 3 - User component + API Documentation (Open API) + Unit Test Cases (Jest) + Winston Logger + Debugging right way
 ## Features
 - Integrated Winston Logger
 - Integrated Open API
