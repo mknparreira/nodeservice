@@ -87,6 +87,11 @@ npm i @types/config -D
 - [Winston Logger](https://github.com/winstonjs/winston)
 - @types/winston
 - @types/http-status-codes
+
+```bash
+npm i winston
+npm i @types/winston -D
+```
 # 4 - Database
 ## Features
 - Coming Soon
