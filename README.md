@@ -102,7 +102,7 @@ Coming soon
 - Coming Soon
 ## Packages installed
 Coming soon
-# 6 - Others issues
+# 6 - Future issues
 ## Features
 - [Cache API Request with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7)
 - [Using Gzip Compression](https://github.com/expressjs/compression)
@@ -118,3 +118,7 @@ app.use(compression())
 
 ## Packages installed
 Coming soon
+
+#Reference
+- [Winston Quick Start](https://github.com/winstonjs/winston/blob/master/examples/quick-start.js)
+- [Write README.md](https://stackedit.io/app)
