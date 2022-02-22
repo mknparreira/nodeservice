@@ -28,6 +28,7 @@ const formats = combine(
     colorize({all: true}),
     format.splat(),
     format.metadata(),
+    format.errors({ stack: true }),
     timestamp({ format: 'YYYY-MM-DD HH:mm:ss:ms' }),
     printf(({timestamp, level, message, metadata}) => {
         return `[${timestamp}] ${level}: ${message}. ${Object.keys(metadata).length !== 0 ? JSON.stringify(metadata) : ''}`;
