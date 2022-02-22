@@ -10,7 +10,7 @@ function errorHandlerMiddleware(error : DefaultException, req: Request, res: Res
     const status  = error.status;
     const message = error.message || 'Internal Server Error';
 
-    Logger.error(`StatusCode: ${status} - Message: ${message}`);
+    Logger.error(`StatusCode: ${status} - Message: ${message} - Error: ${JSON.stringify(error.stack, null, 4)}`);
 
     res.status(status).json({
         message: message,
