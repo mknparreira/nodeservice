@@ -80,17 +80,17 @@ npm i @types/config -D
 - Integrated Winston Logger
 - Integrated Open API
 - Creating first component with TDD
-- Common Error Handler
-- Common Response Handler
+- Custom Error Handler
+- Custom Exceptions Class
 ## Packages installed
 - [Http Status Codes](https://github.com/prettymuchbryce/http-status-codes)
 - [Winston Logger](https://github.com/winstonjs/winston)
 - @types/winston
-- @types/http-status-codes
 
 ```bash
 npm i winston
 npm i @types/winston -D
+npm i http-status-codes
 ```
 # 4 - Database
 ## Features
@@ -122,3 +122,4 @@ Coming soon
 #Reference
 - [Winston Quick Start](https://github.com/winstonjs/winston/blob/master/examples/quick-start.js)
 - [Write README.md](https://stackedit.io/app)
+- [Error Handling in Express](https://medium.com/@utkuu/error-handling-in-express-js-and-express-async-errors-package-639c91ba3aa2)
