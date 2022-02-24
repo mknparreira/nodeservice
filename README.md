@@ -7,10 +7,11 @@ Skeleton for Node.js applications written in TypeScript
 This project will be divided by phases.
 1. Instalation & Configuration **(done)**
 2. Project Structure **(done)**
-3. User component + API Documentation (Open API) + Unit Test Cases (Jest) + Winton logger + Debugging right way
-4. Database 
-5. Authorization + Roles & Permissions + Security
-6. Others issues
+3. User component + Winston Logger + DI Container **(done)**
+4. API Documentation (Open API) + Unit Test Cases (Jest) + Debugging right way **(progress)**
+5. Database + TypeORM
+6. Authorization + Roles & Permissions + Security
+7. Others issues
 # 1 - Instalation & Configuration
 ## Features
 - Quick start
@@ -75,34 +76,43 @@ npm i @types/dotenv -D
 npm i config
 npm i @types/config -D
 ```
-# 3 - User component + API Documentation (Open API) + Unit Test Cases (Jest) + Winston Logger + Debugging right way
+# 3 - User component + Winston Logger + DI Container
 ## Features
 - Integrated Winston Logger
-- Integrated Open API
-- Creating first component with TDD
+- Integrated Microsoft Tsringe DI Container to resolve dependency injection
 - Custom Error Handler
 - Custom Exceptions Class
 ## Packages installed
 - [Http Status Codes](https://github.com/prettymuchbryce/http-status-codes)
 - [Winston Logger](https://github.com/winstonjs/winston)
 - @types/winston
+- [https://github.com/Microsoft/tsyringe](Microsoft Tsringe)
+- [https://github.com/rbuckton/reflect-metadata](Reflect Metadata)
 
 ```bash
 npm i winston
 npm i @types/winston -D
 npm i http-status-codes
+npm i reflect-metadata
+npm i tsyringe
 ```
-# 4 - Database
+# 4 - API Documentation (Open API) + Unit Test Cases (Jest) + Debugging right way
+## Features
+- Integrated Open API
+- Creating first component with TDD (Jest)
+## Packages installed
+Coming soon
+# 5 - Database + TypeORM
 ## Features
 - Coming Soon
 ## Packages installed
 Coming soon
-# 5 - Authorization + Roles & Permissions + Security
+# 6 - Authorization + Roles & Permissions + Security
 ## Features
 - Coming Soon
 ## Packages installed
 Coming soon
-# 6 - Future issues
+# 7 - Future issues
 ## Features
 - [Cache API Request with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7)
 - [Using Gzip Compression](https://github.com/expressjs/compression)
