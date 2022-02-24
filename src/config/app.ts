@@ -1,6 +1,6 @@
 import express, { Application } from 'express';
 import { Callback } from '../interfaces/callback-interface';
-import errorHandlerMiddleware from '../middlewares/errorHandler-middleware';
+import ErrorHandlerMiddleware from '../middlewares/errorHandler-middleware';
 export default class App {
     public app: Application;
 
@@ -20,7 +20,7 @@ export default class App {
     }
 
     private exceptions(): void {
-        this.app.use(errorHandlerMiddleware);
+        this.app.use(ErrorHandlerMiddleware);
     }
 
     private middlewares(): void {
