@@ -1,6 +1,10 @@
-import { Router, Response, Request } from "express";
+import { Router } from "express";
+import { container } from "tsyringe";
+import { UserController }  from "./user-controller";
 
 const routes = Router();
+const controller = container.resolve(UserController);
 
-routes.get('/users', (req: Request, res : Response) => { res.send("chegou aqui kas fiquei não é possivel"); });
+routes.get('/users', controller.getUsers.bind(controller));
+
 export default routes;
