@@ -1,5 +1,5 @@
 import DefaultException from "./default-exception";
-import {ReasonPhrases, StatusCodes} from 'http-status-codes';
+import { ReasonPhrases, StatusCodes } from 'http-status-codes';
 
 class BadRequestException extends DefaultException {
     constructor(message? : string) {
