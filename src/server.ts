@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import App  from './config/app';
 import path from 'path';
 import routes from './config/routes';
