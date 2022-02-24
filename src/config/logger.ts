@@ -1,5 +1,5 @@
-import {format, addColors, createLogger, transports} from 'winston';
-const {combine, timestamp, colorize, printf} = format;
+import { format, addColors, createLogger, transports } from 'winston';
+const { combine, timestamp, colorize, printf } = format;
 
 const levels = {
     error: 0,
@@ -7,7 +7,7 @@ const levels = {
     info: 2,
     http: 3,
     debug: 4,
-}
+};
 
 const colors = {
     error: 'red',
@@ -15,7 +15,7 @@ const colors = {
     info: 'green',
     http: 'magenta',
     debug: 'white',
-}
+};
 addColors(colors);
 
 const transp = {
@@ -25,12 +25,12 @@ const transp = {
 };
 
 const formats = combine(
-    colorize({all: true}),
+    colorize({ all: true }),
     format.splat(),
     format.metadata(),
     format.errors({ stack: true }),
     timestamp({ format: 'YYYY-MM-DD HH:mm:ss:ms' }),
-    printf(({timestamp, level, message, metadata}) => {
+    printf(({ timestamp, level, message, metadata }) => {
         return `[${timestamp}] ${level}: ${message}. ${Object.keys(metadata).length !== 0 ? JSON.stringify(metadata) : ''}`;
     })
 );
