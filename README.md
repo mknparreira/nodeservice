@@ -109,7 +109,7 @@ Coming soon
 Coming soon
 # 6 - Authorization + Roles & Permissions + Security
 ## Features
-- Coming Soon
+- Integrated with Helmet
 ## Packages installed
 Coming soon
 # 7 - Future issues
