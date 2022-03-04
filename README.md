@@ -8,10 +8,11 @@ This project will be divided by phases.
 1. Instalation & Configuration **(done)**
 2. Project Structure **(done)**
 3. User component + Winston Logger + DI Container **(done)**
-4. API Documentation (Open API) + Unit Test Cases (Jest) + Debugging right way **(progress)**
-5. Database + TypeORM
-6. Authorization + Roles & Permissions + Security
-7. Others issues
+4. Unit Test Cases (Jest) + Supertest + Debugging right way **(progress)**
+5. API Documentation (Open API)
+6. Database + TypeORM
+7. Authorization + Roles & Permissions + Security
+8. Others issues
 # 1 - Instalation & Configuration
 ## Features
 - Quick start
@@ -96,23 +97,53 @@ npm i http-status-codes
 npm i reflect-metadata
 npm i tsyringe
 ```
-# 4 - API Documentation (Open API) + Unit Test Cases (Jest) + Debugging right way
+# 4 - Unit Test Cases (Jest) + Supertest + Debugging right way
 ## Features
 - Integrated Open API
 - Creating first component with TDD (Jest)
+- Using Ts-Jest (Preprocessor for Jest which allows Jest to transpile TypeScript)
+- Using Supertest (SuperTest is an HTTP assertions library that allows you to test your Node.js HTTP)
 ## Packages installed
-Coming soon
-# 5 - Database + TypeORM
+- [Jest](https://github.com/facebook/jest)
+- [Ts-Jest](https://github.com/kulshekhar/ts-jest)
+- [Supertest](https://github.com/visionmedia/supertest)
+
+```bash
+npm i jest -D
+npm i @types/jest -D
+npm i ts-jest -D
+npm jest --init
+npm i eslint-plugin-jest -D
+npm i supertest @types/supertest -D
+
+```
+
+Generate Jest config
+```bash
+Would you like to use Typescript for the configuration file? ... yes
+Choose the test environment that will be used for testing » node
+Do you want Jest to add coverage reports? ... no
+Which provider should be used to instrument code for coverage? » v8
+Automatically clear mock calls, instances and results before every test? ... yes
+```
+
+# 5 - API Documentation (Open API) 
 ## Features
 - Coming Soon
 ## Packages installed
 Coming soon
-# 6 - Authorization + Roles & Permissions + Security
+
+# 6 - Database + TypeORM
+## Features
+- Coming Soon
+## Packages installed
+Coming soon
+# 7 - Authorization + Roles & Permissions + Security
 ## Features
 - Integrated with Helmet
 ## Packages installed
 Coming soon
-# 7 - Future issues
+# 8 - Future issues
 ## Features
 - [Cache API Request with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7)
 - [Using Gzip Compression](https://github.com/expressjs/compression)
@@ -125,11 +156,9 @@ app.use(compression())
 ```
 - Cluster
 - [Publisher Subscriber Models (Pub/Sub)](https://faye.jcoglan.com/)
+- [Husky](https://github.com/typicode/husky) 
 
-## Packages installed
-Coming soon
-
-#Reference
+# Reference
 - [Winston Quick Start](https://github.com/winstonjs/winston/blob/master/examples/quick-start.js)
 - [Write README.md](https://stackedit.io/app)
 - [Error Handling in Express](https://medium.com/@utkuu/error-handling-in-express-js-and-express-async-errors-package-639c91ba3aa2)
