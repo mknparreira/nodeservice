@@ -9,7 +9,7 @@ This project will be divided by phases.
 2. Project Structure **(done)**
 3. User component + Winston Logger + DI Container **(done)**
 4. Unit Test Cases (Jest) + Supertest + Debugging right way **(progress)**
-5. API Documentation (Open API)
+5. API Documentation Open API + Swagger
 6. Database + TypeORM
 7. Authorization + Roles & Permissions + Security
 8. Others issues
@@ -127,7 +127,7 @@ Which provider should be used to instrument code for coverage? » v8
 Automatically clear mock calls, instances and results before every test? ... yes
 ```
 
-# 5 - API Documentation (Open API) 
+# 5 - API Documentation Open API + Swagger
 ## Features
 - Coming Soon
 ## Packages installed
@@ -141,12 +141,13 @@ Coming soon
 # 7 - Authorization + Roles & Permissions + Security
 ## Features
 - Integrated with Helmet
+- Integrated with Passport
 ## Packages installed
 Coming soon
 # 8 - Future issues
 ## Features
 - [Cache API Request with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7)
-- [Using Gzip Compression](https://github.com/expressjs/compression)
+- [Gzip Compression](https://github.com/expressjs/compression)
 The server can use gzip compression to reduce file sizes before sending them to a web browser. This will reduce latency and lag
 ```javascript
 const express     = require('express');
