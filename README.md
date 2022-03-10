@@ -8,9 +8,9 @@ This project will be divided by phases.
 1. Instalation & Configuration **(done)**
 2. Project Structure **(done)**
 3. User component + Winston Logger + DI Container **(done)**
-4. Unit Test Cases (Jest) + Supertest + Debugging right way **(progress)**
-5. API Documentation Open API + Swagger
-6. Database + TypeORM
+4. Unit Test Cases (Jest) + Supertest + Debugging right way **(done)**
+5. Database + TypeORM **(in progress)**
+6. API Documentation Open API + Swagger
 7. Authorization + Roles & Permissions + Security
 8. Others issues
 # 1 - Instalation & Configuration
@@ -127,13 +127,13 @@ Which provider should be used to instrument code for coverage? » v8
 Automatically clear mock calls, instances and results before every test? ... yes
 ```
 
-# 5 - API Documentation Open API + Swagger
+# 5 - Database + TypeORM
 ## Features
 - Coming Soon
 ## Packages installed
 Coming soon
 
-# 6 - Database + TypeORM
+# 6 -  API Documentation Open API + Swagger
 ## Features
 - Coming Soon
 ## Packages installed
