@@ -1,21 +1,17 @@
+import { EntityRepository, Repository } from "typeorm";
 import { injectable } from 'tsyringe';
+import { User } from './user-model';
 
 @injectable()
-export default class UserRepository {
-    constructor() {}
+@EntityRepository(User)
 
-    public getUsers() {
-        return [
-            {
-                id : 1,
-                name : 'Joe Dhoe',
-                email : 'joe.dhoe@gmail.com'
-            },
-            {
-                id : 2,
-                name: 'Mary Smith',
-                email: 'mary.smith@gmail.com'
-            }
-        ];
+export class UserRepository extends Repository<User> {
+
+    constructor() {
+        super();
+    }
+
+    async getUsers(): Promise<User[]> {
+        return await this.find();
     }
 }

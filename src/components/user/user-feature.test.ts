@@ -12,4 +12,12 @@ describe('Hello', () => {
         const result = true;
         expect(result).toBe(true);
     });
+
+    it('display user register', async () => {
+        console.log(process.env.NODE_ENV);
+        console.log(process.env.HOST_PORT);
+        const result = false;
+        expect(result).toBe(false);
+    });
+
 });

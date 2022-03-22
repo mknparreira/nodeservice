@@ -39,4 +39,8 @@ dist/
 
 .env
 
-logs/
+.idea/
+.vscode/
+build/
+tmp/
+temp/

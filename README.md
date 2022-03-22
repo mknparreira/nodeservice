@@ -70,7 +70,7 @@ What format do you want your config file to be in?: **JSON**
 - [Dotenv](https://github.com/motdotla/dotenv)
 - @types/config
 - @types/dotenv
-
+## Commands
 ```bash
 npm i dotenv -D
 npm i @types/dotenv -D
@@ -89,7 +89,7 @@ npm i @types/config -D
 - @types/winston
 - [https://github.com/Microsoft/tsyringe](Microsoft Tsringe)
 - [https://github.com/rbuckton/reflect-metadata](Reflect Metadata)
-
+## Commands
 ```bash
 npm i winston
 npm i @types/winston -D
@@ -108,6 +108,7 @@ npm i tsyringe
 - [Ts-Jest](https://github.com/kulshekhar/ts-jest)
 - [Supertest](https://github.com/visionmedia/supertest)
 
+## Commands
 ```bash
 npm i jest -D
 npm i @types/jest -D
@@ -115,9 +116,7 @@ npm i ts-jest -D
 npm jest --init
 npm i eslint-plugin-jest -D
 npm i supertest @types/supertest -D
-
 ```
-
 Generate Jest config
 ```bash
 Would you like to use Typescript for the configuration file? ... yes
@@ -132,6 +131,18 @@ Automatically clear mock calls, instances and results before every test? ... yes
 - Coming Soon
 ## Packages installed
 Coming soon
+
+## Commands
+```bash
+npm i typeorm
+npm i mysql2 @types/mysql
+```
+
+## Configuration
+```bash
+npx typeorm init
+```
+
 
 # 6 -  API Documentation Open API + Swagger
 ## Features

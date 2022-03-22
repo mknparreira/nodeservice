@@ -1,18 +1,15 @@
 import { injectable } from 'tsyringe';
-import UserRepository from './user-repository';
+import { User } from './user-model';
+import { UserRepository } from './user-repository';
+import { getCustomRepository } from "typeorm";
 
 @injectable()
 export default class UserService {
-
-    private userRepository: UserRepository;
-
-    constructor(
-        userRepository : UserRepository,
-    ) {
-        this.userRepository = userRepository;
+    constructor(private userRepository: UserRepository) {
+        this.userRepository = getCustomRepository(UserRepository);  
     }
 
-    public getUsers() {
-        return this.userRepository.getUsers();
+    async getUsers() : Promise<User[]> {
+        return await this.userRepository.getUsers();
     }
 }
