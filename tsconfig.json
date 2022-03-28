@@ -59,6 +59,9 @@
     "forceConsistentCasingInFileNames": true, /* TypeScript will issue an error if a program tries to include a file by a casing different from the casing on disk. */
     "resolveJsonModule": true /* Allows importing modules with a ‘.json’ extension, which is a common practice in node projects */
   },
+  "ts-node": {
+    "transpileOnly": true //It is faster to skip typechecking. Solve the issue: jest.config.ts: Emit skipped 
+  },
   "include": [
     "src/**/*.ts"
   ],
