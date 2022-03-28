@@ -168,9 +168,12 @@ app.use(compression())
 ```
 - Cluster
 - [Publisher Subscriber Models (Pub/Sub)](https://faye.jcoglan.com/)
-- [Husky](https://github.com/typicode/husky) 
+- [Express Rate Limit](https://github.com/nfriedly/express-rate-limit)
+- [Husky](https://github.com/typicode/husky)
+- [CORS](https://github.com/expressjs/cors)
 
 # Reference
 - [Winston Quick Start](https://github.com/winstonjs/winston/blob/master/examples/quick-start.js)
 - [Write README.md](https://stackedit.io/app)
 - [Error Handling in Express](https://medium.com/@utkuu/error-handling-in-express-js-and-express-async-errors-package-639c91ba3aa2)
+- [Libreries you should use for every Node Express project](https://dev.to/wizbuntu/top-15-libraries-you-should-use-for-every-node-express-backend-project-3k23)
