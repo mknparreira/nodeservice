@@ -1,4 +1,4 @@
-class DefaultException extends Error {
+abstract class DefaultException extends Error {
     public status  : number;
     public message : string;
 
