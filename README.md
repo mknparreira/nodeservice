@@ -130,12 +130,17 @@ Automatically clear mock calls, instances and results before every test? ... yes
 ## Features
 - Coming Soon
 ## Packages installed
-Coming soon
+- [Typeorm](https://typeorm.io/)
+- [MySql]
+- [Class Validator](https://github.com/typestack/class-validator)
+- [Class Transformer](https://github.com/typestack/class-transformer)
 
 ## Commands
 ```bash
 npm i typeorm
 npm i mysql2 @types/mysql
+npm i class-validator -D
+npm i class-transformer
 ```
 
 ## Configuration
