@@ -10,6 +10,7 @@ export default class App {
         this.app = express();
         this.middlewares();
         this.routes(routes);
+        this.app.use(ErrorHandlerMiddleware);
     }
 
     private routes(routes: Array<express.Router>) {
@@ -24,7 +25,6 @@ export default class App {
         */
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: true }));
-        this.app.use(ErrorHandlerMiddleware);
         //this.app.use(cors());
     }
 
