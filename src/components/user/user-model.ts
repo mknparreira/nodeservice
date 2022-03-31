@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, CreateDateColumn } from "typeorm";
-import { IsEmail, IsDate, MinLength, IsString, IsDefined, IsNumber } from "class-validator";
+import { IsEmail, MinLength, IsString, IsDefined, IsNumber } from "class-validator";
 
 @Entity()
 export class User extends BaseEntity {
