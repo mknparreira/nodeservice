@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
+import { StatusCodes } from 'http-status-codes';
 import { delay, inject, injectable } from 'tsyringe';
 import validateRequest from '../../decorators/validateRequest-decorator';
 import NotFoundException from '../../exceptions/notFound-exception';
@@ -30,7 +31,7 @@ export class UserController {
     async create(req: Request, res: Response, next: NextFunction) : Promise<Response|void> {
         try {
             const result = await this.userService.create(req.body);
-            return res.json(result);
+            return res.status(StatusCodes.CREATED).json(result);
         } catch (error) {
             next(error);
         }
