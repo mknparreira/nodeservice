@@ -1,5 +1,6 @@
-import { Connection, createConnection, EntityTarget, getConnection } from 'typeorm';
+import { Connection, createConnection, getConnection } from 'typeorm';
 import NotFoundException from '../exceptions/notFound-exception';
+import { Entity } from '../interfaces/entity-interface';
 import Logger from './logger';
 
 const create = async () : Promise<Connection> => {
@@ -9,12 +10,12 @@ const create = async () : Promise<Connection> => {
         return connection;
     } catch (error) {
         Logger.error(error);
-        throw new NotFoundException("It is not possible connect with database 2");
+        throw new NotFoundException("It is not possible connect with database");
     }
 };
 
-const getEntities = async () : Promise<{ name: EntityTarget<unknown>; tableName: string; }[]> => {
-    const entities: { name: string; tableName: string; }[] = [];
+const getEntities = async () : Promise<Entity[]> => {
+    const entities: Entity[] = [];
     const connection = getConnection();
     const entityMetadatas = connection.entityMetadatas;
 
@@ -47,7 +48,7 @@ const close = async () : Promise<void> => {
         if (connection.isConnected) await connection.close();
     } catch (error) {
         Logger.error(error);
-        throw new NotFoundException(`Try to close connection: ${error}`);
+        throw new NotFoundException(`Failed to close connection: ${error}`);
     }
 };
 
