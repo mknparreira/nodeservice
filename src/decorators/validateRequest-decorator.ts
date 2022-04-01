@@ -1,15 +1,15 @@
-import { plainToInstance } from "class-transformer";
+import { ClassConstructor, plainToInstance } from "class-transformer";
 import { validate } from "class-validator";
 import { NextFunction, Request, Response } from "express";
 import BadRequestException from "../exceptions/badRequest-exception";
 
-const validateRequest = (entity:any) => {
-  return (target:any, key:string, descriptor: PropertyDescriptor) => {
+const validateRequest = (entity:ClassConstructor<object>) => {
+  return (target:object, key:string, descriptor: PropertyDescriptor) => {
     const originalMethod = descriptor.value;
     descriptor.value = async function(req: Request, res: Response, next: NextFunction) {
       try {
-        const t = plainToInstance(entity, req.body);
-        const errors = await validate(t);
+        const rules = plainToInstance(entity, req.body);
+        const errors = await validate(rules);
 
         if (errors.length > 0) {
           let errorTexts:any = [];

@@ -16,7 +16,7 @@ export class UserController {
         this.userService = userService;
     }
 
-    async getUsers(req: Request, res: Response, next: NextFunction) : Promise<any> {
+    async getUsers(req: Request, res: Response, next: NextFunction) : Promise<Response|void> {
         try {
             const users = await this.userService.getUsers();
             if(!users) throw new NotFoundException();
@@ -27,7 +27,7 @@ export class UserController {
     }
 
     @validateRequest(User)
-    async create(req: Request, res: Response, next: NextFunction) : Promise<any> {
+    async create(req: Request, res: Response, next: NextFunction) : Promise<Response|void> {
         try {
             const result = await this.userService.create(req.body);
             return res.json(result);
