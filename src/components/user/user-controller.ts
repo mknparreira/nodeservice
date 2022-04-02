@@ -2,9 +2,11 @@ import { NextFunction, Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { delay, inject, injectable } from 'tsyringe';
 import validateRequest from '../../decorators/validateRequest-decorator';
+import BadRequestException from '../../exceptions/badRequest-exception';
 import NotFoundException from '../../exceptions/notFound-exception';
 import { User } from './user-model';
 import UserService from './user-service';
+import { UserRequestList } from './user-type';
 @injectable()
 export class UserController {
 
@@ -27,11 +29,35 @@ export class UserController {
         } 
     }
 
+    async list(req: Request, res: Response, next: NextFunction) : Promise<Response | void> {
+        try {
+            //Note: cannot cast from a custom to a primitive without erasing the type first. unknown erases the type checking.
+            const params: UserRequestList = req.params as unknown as UserRequestList;
+            const user = await this.userService.list(params);
+            if(!user) throw new NotFoundException("User not found");
+            return res.json(user);
+        } catch(error) {
+            next(error);
+        } 
+    }
+
     @validateRequest(User)
     async create(req: Request, res: Response, next: NextFunction) : Promise<Response|void> {
         try {
             const result = await this.userService.create(req.body);
             return res.status(StatusCodes.CREATED).json(result);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    @validateRequest(User)
+    async edit(req: Request, res: Response, next: NextFunction) : Promise<Response | void> {
+        try {
+            const result = await this.userService.edit(req.body);
+            if(!result) throw new BadRequestException('Occoured an error try to update user');
+            if(!result.affected) throw new NotFoundException('The user cannot be found');
+            return res.status(StatusCodes.OK).json('The resource successfully updated');
         } catch (error) {
             next(error);
         }
