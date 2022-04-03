@@ -16,7 +16,7 @@ export class UserController {
     this.userService = userService;
   }
 
-  async getUsers(req: Request, res: Response, next: NextFunction) : Promise<Response|void> {
+  async getUsers(req: Request, res: Response, next: NextFunction) : Promise<Response | void> {
     try {
       const users = await this.userService.getUsers();
 
@@ -42,7 +42,7 @@ export class UserController {
   }
 
   @validateRequest(User)
-  async create(req: Request, res: Response, next: NextFunction) : Promise<Response|void> {
+  async create(req: Request, res: Response, next: NextFunction) : Promise<Response | void> {
     try {
       const result = await this.userService.create(req.body);
 
