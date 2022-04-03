@@ -203,7 +203,7 @@
         "function-call-argument-newline": ["error", "never"],
         "function-paren-newline": ["error", "never"],
         "implicit-arrow-linebreak": ["error", "beside"],
-        "indent": ["error", "tab"],
+        "indent": ["error", 2],
         "key-spacing": ["error", { "beforeColon": false }],
         "keyword-spacing": ["error", { "before": true }],
         "lines-between-class-members": ["error", "always"],
@@ -215,7 +215,7 @@
         "no-whitespace-before-property": "error",
         "object-curly-newline": ["error",  { "multiline": true }],
         "operator-linebreak": ["error", "none"],
-        "padded-blocks": ["error", "always"],
+        "padded-blocks": ["error", "never"],
         "padding-line-between-statements": [
             "error",
             { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*"},
@@ -230,6 +230,7 @@
         "space-infix-ops": "error",
         "space-unary-ops": "error",
         "switch-colon-spacing": "error",
-        "prefer-rest-params": "error"
+        "prefer-rest-params": "error",
+        "eol-last": ["error", "always"]
     }
 }
