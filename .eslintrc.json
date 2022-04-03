@@ -32,7 +32,7 @@
             "error",
             "always"
         ],
-        "max-len": "off",
+        "max-len": ["error", { "code": 100 }],
         "object-curly-spacing": [
             "error",
             "always"
@@ -181,6 +181,55 @@
         "jest/valid-describe-callback": "error",
         "jest/valid-expect": "error",
         "jest/valid-expect-in-promise": "error",
-        "jest/valid-title": "error"
+        "jest/valid-title": "error",
+        "array-bracket-newline": ["error", "never"],
+        "array-bracket-spacing": [
+            "error", 
+            "never", {
+                "singleValue": false,
+                "objectsInArrays": false
+            }
+        ],
+        "array-element-newline": ["error", "never"],
+        "arrow-parens" : ["error", "as-needed", { "requireForBlockBody": true }],
+        "arrow-spacing": ["error", { "before": true, "after": true }],
+        "block-spacing": ["error", "always"],
+        "brace-style": ["error", "1tbs"],
+        "comma-dangle": ["error", "never"],
+        "comma-spacing": ["error", { "before": false, "after": true }],
+        "comma-style": ["error", "last"],
+        "computed-property-spacing": ["error", "never"],
+        "func-call-spacing": ["error", "never"],
+        "function-call-argument-newline": ["error", "never"],
+        "function-paren-newline": ["error", "never"],
+        "implicit-arrow-linebreak": ["error", "beside"],
+        "indent": ["error", "tab"],
+        "key-spacing": ["error", { "beforeColon": false }],
+        "keyword-spacing": ["error", { "before": true }],
+        "lines-between-class-members": ["error", "always"],
+        "max-statements-per-line": ["error", { "max": 1 }],
+        "no-extra-parens": "error",
+        "no-multi-spaces": "error",
+        "no-multiple-empty-lines": ["error", { "max": 1 }],
+        "no-trailing-spaces": "error",
+        "no-whitespace-before-property": "error",
+        "object-curly-newline": ["error",  { "multiline": true }],
+        "operator-linebreak": ["error", "none"],
+        "padded-blocks": ["error", "always"],
+        "padding-line-between-statements": [
+            "error",
+            { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*"},
+            { "blankLine": "any",    "prev": ["const", "let", "var"], "next": ["const", "let", "var"]}
+        ],
+        "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+        "rest-spread-spacing": ["error", "never"],
+        "semi-spacing": "error",
+        "space-before-blocks": ["error", "always"],
+        "space-before-function-paren":  ["error", "never"],
+        "space-in-parens": ["error", "never"],
+        "space-infix-ops": "error",
+        "space-unary-ops": "error",
+        "switch-colon-spacing": "error",
+        "prefer-rest-params": "error"
     }
 }
