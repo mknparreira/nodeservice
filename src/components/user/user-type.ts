@@ -1,3 +1,3 @@
-export interface UserRequestList  {
+export interface UserRequestList {
     vatNumber: number
-  }
+}

@@ -1,5 +1,3 @@
 import userRoutes from '../components/user/user-router';
 
-export default [
-    userRoutes
-];
+export default [userRoutes];
