@@ -136,7 +136,8 @@
                 "allowModules": [
                     "dotenv",
                     "jest",
-                    "class-validator"
+                    "class-validator",
+                    "supertest"
                 ]
             }
         ],
