@@ -5,6 +5,7 @@
    "main": "index.js",
    "scripts": {
       "start": "nodemon",
+      "start:inspect": "nodemon --inspect",
       "start:prod": "npm run build && node ./dist/server.js",
       "build": "npx tsc",
       "test": "jest",
