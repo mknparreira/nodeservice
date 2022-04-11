@@ -66,7 +66,7 @@ What format do you want your config file to be in?: **JSON**
 - Global Enviroment Object
 - Structure by components
 ## Packages installed
-- [Config](https://github.com/node-config/node-config)
+- [Config](htttps://github.com/node-config/node-config)
 - [Dotenv](https://github.com/motdotla/dotenv)
 - @types/config
 - @types/dotenv
@@ -152,20 +152,27 @@ npx typeorm init
 - Integrated with ESLint Plugin Security
 - Protects from DDoS attacks
 - Prevent Brute Force attacks
+- Limit concurrent requests using a middleware Express Rate Limit
+
 ## Packages installed
+- [Helmet](https://helmetjs.github.io/)
 - [ESLint Plugin Security](https://github.com/nodesecurity/eslint-plugin-security)
 - [Security Best Practices](https://github.com/goldbergyoni/nodebestpractices#6-security-best-practices)
+
+- [Express Rate Limit](https://github.com/nfriedly/express-rate-limit)
+- [Node Rate Limiter Flexible](https://github.com/animir/node-rate-limiter-flexible)
+
 ## Commands
 ```bash
 npm i eslint-plugin-security -D
+npm i helmet
 ```
 # 7 - Authorization with Passport + Roles & Permissions
 ## Features
-- Integrated with Passport
-- Rate Limit
+- Integrated with Passport + JWT (Jason Web Tokens)
+- Users password with Bcrypt
+- Support blocklisting JWTs
 ## Packages installed
-- [Express Rate Limit](https://github.com/nfriedly/express-rate-limit)
-- [Node Rate Limiter Flexible](https://github.com/animir/node-rate-limiter-flexible)
 - [Passaport](https://github.com/jaredhanson/passport)
 
 ## Commands
@@ -200,8 +207,8 @@ app.use(compression())
 - [Winston Quick Start](https://github.com/winstonjs/winston/blob/master/examples/quick-start.js)
 - [Write README.md](https://stackedit.io/app)
 - [Error Handling in Express](https://medium.com/@utkuu/error-handling-in-express-js-and-express-async-errors-package-639c91ba3aa2)
-- [Libreries you should use for every Node Express project](https://dev.to/wizbuntu/top-15-libraries-you-should-use-for-every-node-express-backend-project-3k23)
-- [Handling errors in express async middleware](https://stackoverflow.com/questions/51391080/handling-errors-in-express-async-middleware)
+- [Libraries you should use for every Node Express project](https://dev.to/wizbuntu/top-15-libraries-you-should-use-for-every-node-express-backend-project-3k23)
+- [Handling errors in Express async middleware](https://stackoverflow.com/questions/51391080/handling-errors-in-express-async-middleware)
 - [TypeScript Decorators](https://stackoverflow.com/questions/49352943/how-to-get-parameters-name-within-decorators)
 - [Example Boilerplate](https://github.com/vassalloandrea/express-template/)
 - [Example Boilerplate](https://github.com/santoshshinde2012/node-boilerplate)
