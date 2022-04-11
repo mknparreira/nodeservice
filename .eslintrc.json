@@ -9,7 +9,8 @@
         "plugin:@typescript-eslint/recommended",
         "eslint:recommended",
         "plugin:node/recommended-module",
-        "prettier"
+        "prettier",
+        "plugin:security/recommended"
     ],
     "parserOptions": {
         "project": [

@@ -155,13 +155,20 @@ npx typeorm init
 - Integrated with Passport
 - Integrated with ESLint Plugin Security
 - Rate Limit
-- Protects from DDoS and brute force attacks
+- Protects from DDoS attacks
+- Prevent Brute Force attacks
 ## Packages installed
 - [ESLint Plugin Security](https://github.com/nodesecurity/eslint-plugin-security)
 - [Express Rate Limit](https://github.com/nfriedly/express-rate-limit)
 - [Node Rate Limiter Flexible](https://github.com/animir/node-rate-limiter-flexible)
 - [Security Best Practices](https://github.com/goldbergyoni/nodebestpractices#6-security-best-practices)
 - [Passaport](https://github.com/jaredhanson/passport)
+
+## Commands
+```bash
+npm i eslint-plugin-security -D
+```
+
 
 # 7 - Documentation Open API + Swagger
 ## Features
