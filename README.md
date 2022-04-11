@@ -9,9 +9,9 @@ This project will be divided by phases.
 2. Project Structure **(done)**
 3. User component + Winston Logger + DI Container **(done)**
 4. Unit Test Cases (Jest) + Supertest + Debugging right way **(done)**
-5. Database + TypeORM **(in progress)**
-6. API Documentation Open API + Swagger
-7. Authorization + Roles & Permissions + Security
+5. Database + TypeORM **(done)**
+6. Authorization + Roles & Permissions + Security Best Practices **(in progress)**
+7. Documentation Open API + Swagger 
 8. Others issues
 # 1 - Instalation & Configuration
 ## Features
@@ -87,8 +87,8 @@ npm i @types/config -D
 - [Http Status Codes](https://github.com/prettymuchbryce/http-status-codes)
 - [Winston Logger](https://github.com/winstonjs/winston)
 - @types/winston
-- [https://github.com/Microsoft/tsyringe](Microsoft Tsringe)
-- [https://github.com/rbuckton/reflect-metadata](Reflect Metadata)
+- [Microsoft Tsringe](https://github.com/Microsoft/tsyringe)
+- [Reflect Metadata](https://github.com/rbuckton/reflect-metadata)
 ## Commands
 ```bash
 npm i winston
@@ -128,10 +128,12 @@ Automatically clear mock calls, instances and results before every test? ... yes
 
 # 5 - Database + TypeORM
 ## Features
-- Coming Soon
+- Integrated with TypeORM
+- Added MySQL
+- Added Validation model using Class Validator package
 ## Packages installed
 - [Typeorm](https://typeorm.io/)
-- [MySql]
+- MySql
 - [Class Validator](https://github.com/typestack/class-validator)
 - [Class Transformer](https://github.com/typestack/class-transformer)
 
@@ -147,19 +149,26 @@ npm i class-transformer
 ```bash
 npx typeorm init
 ```
+# 6 - Authorization + Roles & Permissions + Security Best Practices
+## Features
+- Integrated with Helmet
+- Integrated with Passport
+- Integrated with ESLint Plugin Security
+- Rate Limit
+- Protects from DDoS and brute force attacks
+## Packages installed
+- [ESLint Plugin Security](https://github.com/nodesecurity/eslint-plugin-security)
+- [Express Rate Limit](https://github.com/nfriedly/express-rate-limit)
+- [Node Rate Limiter Flexible](https://github.com/animir/node-rate-limiter-flexible)
+- [Security Best Practices](https://github.com/goldbergyoni/nodebestpractices#6-security-best-practices)
+- [Passaport](https://github.com/jaredhanson/passport)
 
-
-# 6 -  API Documentation Open API + Swagger
+# 7 - Documentation Open API + Swagger
 ## Features
 - Coming Soon
 ## Packages installed
 Coming soon
-# 7 - Authorization + Roles & Permissions + Security
-## Features
-- Integrated with Helmet
-- Integrated with Passport
-## Packages installed
-Coming soon
+
 # 8 - Future issues
 ## Features
 - [Cache API Request with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7)
@@ -173,14 +182,22 @@ app.use(compression())
 ```
 - Cluster
 - [Publisher Subscriber Models (Pub/Sub)](https://faye.jcoglan.com/)
-- [Express Rate Limit](https://github.com/nfriedly/express-rate-limit)
 - [Husky](https://github.com/typicode/husky)
 - [CORS](https://github.com/expressjs/cors)
+- [Diagnose Performance](https://clinicjs.org/)
+- [PM2](https://github.com/Unitech/pm2)
 
 # Reference
+- [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
+- [Node Best Practices](https://softwareontheroad.com/ideal-nodejs-project-structure/)
 - [Winston Quick Start](https://github.com/winstonjs/winston/blob/master/examples/quick-start.js)
 - [Write README.md](https://stackedit.io/app)
 - [Error Handling in Express](https://medium.com/@utkuu/error-handling-in-express-js-and-express-async-errors-package-639c91ba3aa2)
 - [Libreries you should use for every Node Express project](https://dev.to/wizbuntu/top-15-libraries-you-should-use-for-every-node-express-backend-project-3k23)
 - [Handling errors in express async middleware](https://stackoverflow.com/questions/51391080/handling-errors-in-express-async-middleware)
 - [TypeScript Decorators](https://stackoverflow.com/questions/49352943/how-to-get-parameters-name-within-decorators)
+- [Example Boilerplate](https://github.com/vassalloandrea/express-template/)
+- [Example Boilerplate](https://github.com/santoshshinde2012/node-boilerplate)
+- [Example Boilerplate](https://github.com/bartosz-io/budget-node)
+- [Example Boilerplate](https://github.com/Rocketseat/umbriel)
+- [Example Boilerplate](https://github.com/phatvo21/task-management)
