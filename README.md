@@ -2,7 +2,7 @@
 # Node.js with TypeScript Boilerplate
 Skeleton for Node.js applications written in TypeScript  
 ## Purpose
- Start server application with Node.js and TypeScript.
+Start server application with Node.js and TypeScript.
 ## Roadmap
 This project will be divided by phases.
 1. Instalation & Configuration **(done)**
@@ -10,9 +10,10 @@ This project will be divided by phases.
 3. User component + Winston Logger + DI Container **(done)**
 4. Unit Test Cases (Jest) + Supertest + Debugging right way **(done)**
 5. Database + TypeORM **(done)**
-6. Authorization + Roles & Permissions + Security Best Practices **(in progress)**
-7. Documentation Open API + Swagger 
-8. Others issues
+6. Security Best Practices **(in progress)**
+7. Authorization with Passport + Roles & Permissions 
+8. Documentation Open API + Swagger 
+9. Others issues
 # 1 - Instalation & Configuration
 ## Features
 - Quick start
@@ -50,7 +51,6 @@ npm i ts-node -D
 npm i nodemon -D
 npm i eslint-plugin-node -D
 ```
-
 ESLint
 ```bash
 How would you like to use ESLint?: **To check syntax and find problems**
@@ -125,7 +125,6 @@ Do you want Jest to add coverage reports? ... no
 Which provider should be used to instrument code for coverage? » v8
 Automatically clear mock calls, instances and results before every test? ... yes
 ```
-
 # 5 - Database + TypeORM
 ## Features
 - Integrated with TypeORM
@@ -136,7 +135,6 @@ Automatically clear mock calls, instances and results before every test? ... yes
 - MySql
 - [Class Validator](https://github.com/typestack/class-validator)
 - [Class Transformer](https://github.com/typestack/class-transformer)
-
 ## Commands
 ```bash
 npm i typeorm
@@ -144,39 +142,41 @@ npm i mysql2 @types/mysql
 npm i class-validator -D
 npm i class-transformer
 ```
-
 ## Configuration
 ```bash
 npx typeorm init
 ```
-# 6 - Authorization + Roles & Permissions + Security Best Practices
+# 6 - Security Best Practices
 ## Features
 - Integrated with Helmet
-- Integrated with Passport
 - Integrated with ESLint Plugin Security
-- Rate Limit
 - Protects from DDoS attacks
 - Prevent Brute Force attacks
 ## Packages installed
 - [ESLint Plugin Security](https://github.com/nodesecurity/eslint-plugin-security)
-- [Express Rate Limit](https://github.com/nfriedly/express-rate-limit)
-- [Node Rate Limiter Flexible](https://github.com/animir/node-rate-limiter-flexible)
 - [Security Best Practices](https://github.com/goldbergyoni/nodebestpractices#6-security-best-practices)
-- [Passaport](https://github.com/jaredhanson/passport)
-
 ## Commands
 ```bash
 npm i eslint-plugin-security -D
 ```
+# 7 - Authorization with Passport + Roles & Permissions
+## Features
+- Integrated with Passport
+- Rate Limit
+## Packages installed
+- [Express Rate Limit](https://github.com/nfriedly/express-rate-limit)
+- [Node Rate Limiter Flexible](https://github.com/animir/node-rate-limiter-flexible)
+- [Passaport](https://github.com/jaredhanson/passport)
 
-
-# 7 - Documentation Open API + Swagger
+## Commands
+Coming soon
+# 8 - Documentation Open API + Swagger
 ## Features
 - Coming Soon
 ## Packages installed
 Coming soon
 
-# 8 - Future issues
+# 9 - Future issues
 ## Features
 - [Cache API Request with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7)
 - [Gzip Compression](https://github.com/expressjs/compression)
