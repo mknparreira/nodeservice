@@ -10,7 +10,7 @@ This project will be divided by phases.
 3. User component + Winston Logger + DI Container **(done)**
 4. Unit Test Cases (Jest) + Supertest + Debugging right way **(done)**
 5. Database + TypeORM **(done)**
-6. Security Best Practices **(in progress)**
+6. Security Practices **(in progress)**
 7. Authorization with Passport + Roles & Permissions 
 8. Documentation Open API + Swagger 
 9. Others issues
@@ -132,7 +132,7 @@ Automatically clear mock calls, instances and results before every test? ... yes
 - Added Validation model using Class Validator package
 ## Packages installed
 - [Typeorm](https://typeorm.io/)
-- MySql
+- [MySQL 2](https://github.com/sidorares/node-mysql2)
 - [Class Validator](https://github.com/typestack/class-validator)
 - [Class Transformer](https://github.com/typestack/class-transformer)
 ## Commands
@@ -146,26 +146,28 @@ npm i class-transformer
 ```bash
 npx typeorm init
 ```
-# 6 - Security Best Practices
+# 6 - Security Practices
 ## Features
 - Integrated with Helmet
 - Integrated with ESLint Plugin Security
 - Protects from DDoS attacks
 - Prevent Brute Force attacks
 - Limit concurrent requests using a middleware Express Rate Limit
+- Enabled CORS
 
 ## Packages installed
 - [Helmet](https://helmetjs.github.io/)
 - [ESLint Plugin Security](https://github.com/nodesecurity/eslint-plugin-security)
-- [Security Best Practices](https://github.com/goldbergyoni/nodebestpractices#6-security-best-practices)
-
-- [Express Rate Limit](https://github.com/nfriedly/express-rate-limit)
-- [Node Rate Limiter Flexible](https://github.com/animir/node-rate-limiter-flexible)
+- [Express Rate Limiter Flexible](https://github.com/animir/node-rate-limiter-flexible)
+- [CORS](https://github.com/expressjs/cors)
 
 ## Commands
 ```bash
 npm i eslint-plugin-security -D
 npm i helmet
+npm i rate-limiter-flexible
+npm i cors
+npm i -D @types/cors
 ```
 # 7 - Authorization with Passport + Roles & Permissions
 ## Features
@@ -197,9 +199,10 @@ app.use(compression())
 - Cluster
 - [Publisher Subscriber Models (Pub/Sub)](https://faye.jcoglan.com/)
 - [Husky](https://github.com/typicode/husky)
-- [CORS](https://github.com/expressjs/cors)
 - [Diagnose Performance](https://clinicjs.org/)
 - [PM2](https://github.com/Unitech/pm2)
+- [Validate JSON Schema](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/validation.md)
+- [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md)
 
 # Reference
 - [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
@@ -215,3 +218,4 @@ app.use(compression())
 - [Example Boilerplate](https://github.com/bartosz-io/budget-node)
 - [Example Boilerplate](https://github.com/Rocketseat/umbriel)
 - [Example Boilerplate](https://github.com/phatvo21/task-management)
+- [Brute Force Protectiion](https://medium.com/@animirr/brute-force-protection-node-js-examples-cd58e8bd9b8d)
