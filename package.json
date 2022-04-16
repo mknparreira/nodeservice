@@ -58,6 +58,7 @@
       "http-status-codes": "^2.2.0",
       "mysql": "^2.14.1",
       "mysql2": "^2.3.3",
+      "rate-limiter-flexible": "^2.3.6",
       "reflect-metadata": "^0.1.13",
       "tsyringe": "^4.6.0",
       "typeorm": "0.2.45",
