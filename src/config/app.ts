@@ -2,6 +2,7 @@ import express, { Application } from 'express';
 import { Callback } from '../interfaces/callback-interface';
 import ErrorHandlerMiddleware from '../middlewares/errorHandler-middleware';
 import helmet from 'helmet';
+import RateLimitMiddleware from '../middlewares/rateLimit-middleware';
 export default class App {
   public app: Application;
 
@@ -26,6 +27,7 @@ export default class App {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(helmet());
+    this.app.use(RateLimitMiddleware);
     //this.app.use(cors());
   }
 
