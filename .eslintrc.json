@@ -49,7 +49,11 @@
                 "selector": "default",
                 "format": [
                     "camelCase"
-                ]
+                ],
+                "filter" : {
+                    "regex": "^(Retry-After|X-RateLimit-Limit|X-RateLimit-Remaining|X-RateLimit-Reset)$",
+                    "match": false
+                }
             },
             {
                 "selector": "variable",
