@@ -214,6 +214,7 @@ Coming soon
 | [PM2](https://github.com/Unitech/pm2) |  |
 | [Validate JSON Schema](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/validation.md) |  |
 | [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md) |  |
+| [Sinon](https://sinonjs.org/) | Spies, Stubs and Mocks |
 
 # Reference
 - [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
@@ -229,5 +230,6 @@ Coming soon
 - [Example Boilerplate](https://github.com/bartosz-io/budget-node)
 - [Example Boilerplate](https://github.com/Rocketseat/umbriel)
 - [Example Boilerplate](https://github.com/phatvo21/task-management)
+- [Example Boilerplate](https://github.com/sahat/hackathon-starter)
 - [Brute Force Protectiion](https://medium.com/@animirr/brute-force-protection-node-js-examples-cd58e8bd9b8d)
 - [Node Express Helmet](https://betterprogramming.pub/nodejs-express-helmet-aa58c09c55c5)
