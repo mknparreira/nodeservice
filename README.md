@@ -11,9 +11,10 @@ This project will be divided by phases:
 4. Unit Test Cases (Jest) + Supertest + Debugging right way **(done)**
 5. Database + TypeORM **(done)**
 6. Security Practices **(done)**
-7. Authorization with Passport + Roles & Permissions 
-8. Documentation Open API + Swagger 
-9. Some issues
+7. Documentation Open API + Swagger
+8. Authorization with Passport + Roles & Permissions 
+9. Monitoring + Perfomance
+10. Some issues
 # 1 - Instalation & Configuration
 ## Features
 - Quick start
@@ -183,7 +184,15 @@ npm i rate-limiter-flexible
 npm i cors
 npm i -D @types/cors
 ```
-# 7 - Authorization with Passport + Roles & Permissions
+# 7 - Documentation Open API + Swagger
+## Features
+- Swagger
+## Packages installed
+| Package | Description |
+|---------|-------------|
+| Swagger |             |
+
+# 8 - Authorization with Passport + Roles & Permissions
 ## Features
 - Integrated with Passport + JWT (Jason Web Tokens)
 - Users password with Bcrypt
@@ -191,30 +200,33 @@ npm i -D @types/cors
 ## Packages installed
 | Package | Description |
 |---------|-------------|
-| [Passaport](https://github.com/jaredhanson/passport)                          |                                               |
+| [Passaport](https://github.com/jaredhanson/passport) |                                               |
+| [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md) |  |
 
-## Commands
-Coming soon
-# 8 - Documentation Open API + Swagger
+# 9 - Monitoring + Perfomance
 ## Features
-- Coming Soon
+- Monitoring application using Pm2
+- Gzip Compression
+- Diagnose Perfomance
+- Caching strategy
 ## Packages installed
-Coming soon
-
-# 9 - Future issues
-## Features
 | Package | Description |
 |---------|-------------|
 | [Cache API Request with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7) |               |
 | [Gzip Compression](https://github.com/expressjs/compression) | Node.js compression middleware |
-| Cluster |  |
-| [Publisher Subscriber Models (Pub/Sub)](https://faye.jcoglan.com/) |  |
-| [Husky](https://github.com/typicode/husky) |  |
 | [Diagnose Performance](https://clinicjs.org/) |  |
 | [PM2](https://github.com/Unitech/pm2) |  |
+# 10 - Future issues
+## Features
+| Package | Description |
+|---------|-------------|
+| Cluster |             |
+| Closures |            |
+| [Publisher Subscriber Models (Pub/Sub)](https://faye.jcoglan.com/) |  |
+| [Husky](https://github.com/typicode/husky) |  |
 | [Validate JSON Schema](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/validation.md) |  |
-| [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md) |  |
 | [Sinon](https://sinonjs.org/) | Spies, Stubs and Mocks |
+| Cron Jobs |           |
 
 # Reference
 - [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
