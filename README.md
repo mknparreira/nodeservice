@@ -227,6 +227,7 @@ npm i -D @types/cors
 | [Validate JSON Schema](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/validation.md) |  |
 | [Sinon](https://sinonjs.org/) | Spies, Stubs and Mocks |
 | Cron Jobs |           |
+| Conditional Requests Headers | Last-Modified, Etag, If-Modified-Since, If-None-Match|
 
 # Reference
 - [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
