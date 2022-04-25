@@ -11,7 +11,7 @@ This project will be divided by phases:
 4. Unit Test Cases (Jest) + Supertest + Debugging right way **(done)**
 5. Database + TypeORM **(done)**
 6. Security Practices **(done)**
-7. Documentation Open API + Swagger
+7. Open API Documentation with Swagger **(done)**
 8. Authorization with Passport + Roles & Permissions 
 9. Monitoring + Perfomance
 10. Some issues
@@ -184,7 +184,7 @@ npm i rate-limiter-flexible
 npm i cors
 npm i -D @types/cors
 ```
-# 7 - Documentation Open API + Swagger
+# 7 - Open API Documentation with Swagger
 ## Features
 - Swagger
 - Open API 3.0.1
