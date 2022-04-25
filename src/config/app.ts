@@ -4,6 +4,8 @@ import ErrorHandlerMiddleware from '../middlewares/errorHandler-middleware';
 import helmet from 'helmet';
 import RateLimitMiddleware from '../middlewares/rateLimit-middleware';
 import cors from 'cors';
+import swaggetUI from 'swagger-ui-express';
+import userDoc from '../components/user/user-documentation.json';
 export default class App {
   public app: Application;
 
@@ -11,6 +13,7 @@ export default class App {
     this.app = express();
     this.middlewares();
     this.routes(routes);
+    this.swaggerDocs();
     this.app.use(ErrorHandlerMiddleware);
   }
 
@@ -30,6 +33,10 @@ export default class App {
     this.app.use(helmet());
     this.app.use(RateLimitMiddleware);
     this.app.use(cors());
+  }
+
+  private swaggerDocs(): void {
+    this.app.use('/api-docs/user', swaggetUI.serveFiles(userDoc), swaggetUI.setup(userDoc));
   }
 
   public listen(port : string, callback : Callback) {

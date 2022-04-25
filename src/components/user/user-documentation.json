@@ -1,0 +1,313 @@
+{
+    "openapi": "3.0.1",
+    
+    "info": {
+        "title": "Nodeservice",
+        "description": "This is a skeleton for Node.js applications written in TypeScript",
+        "contact": {
+            "name" : "Maikon Parreira",
+            "url"  : "https://github.com/mknparreira/nodeservice",
+            "email": "mknparreira@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+
+    "servers" : [
+        {
+            "url" : "http://localhost:3000",
+            "description": "Development"
+        }
+    ],
+
+    "paths" : {
+        "/users" : {
+            "get" : {
+                "summary" : "Listing all users",
+                "description": "Retrieve all users restored",
+                "operationId": "getUsers",
+                "tags": ["Users"],
+                "requestBody": {
+                    "content": {
+                        "application/json": {}
+                    }
+                },
+                "responses": {
+                    "200" : {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/User"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "429" : {
+                        "$ref": "#/components/responses/429TooManyRequests"
+                    }
+                }
+            }
+        },
+
+        "/user/create" : {
+            "post" : {
+                "summary" : "Create a new user",
+                "description": "Creating a new user",
+                "operationId": "create",
+                "tags": ["Users"],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/User"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201" : {
+                        "description": "Created",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/User"
+                                }
+                            }
+                        }
+                    },
+                    "400" : {
+                        "$ref": "#/components/responses/400BadRequest"
+                    },
+                    "429" : {
+                        "$ref": "#/components/responses/429TooManyRequests"
+                    }
+                }
+            }
+        },
+
+        "/user/edit" : {
+            "put" : {
+                "summary" : "Edit an user",
+                "description": "Updating an user",
+                "operationId": "edit",
+                "tags": ["Users"],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/User"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200" : {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "default":"The resource successfully updated"
+                                }
+                            }
+                        }
+                    },
+                    "400" : {
+                        "$ref": "#/components/responses/400BadRequest"
+                    },
+                    "429" : {
+                        "$ref": "#/components/responses/429TooManyRequests"
+                    }
+                }
+            }
+        },
+
+        "/user/show/{vatId}" : {
+            "get" : {
+                "summary" : "Get user by VAT number",
+                "description": "Get user data by VAT number",
+                "operationId": "list",
+                "tags": ["Users"],
+                "parameters": [
+                    {
+                        "name": "vatId",
+                        "in": "path",
+                        "description": "ID of vatId that needs to be listed",
+                        "required": true,
+                        "schema": {
+                          "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {}
+                    }
+                },
+                "responses": {
+                    "200" : {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/User"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404" : {
+                        "$ref": "#/components/responses/404NotFound"
+                    },
+                    "429" : {
+                        "$ref": "#/components/responses/429TooManyRequests"
+                    }
+                }
+            }
+        }
+    },
+
+    "components": {
+        "schemas": {
+            "User": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1,
+                        "nullable": false,
+                        "uniqueItems": true
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "John Doe",
+                        "nullable": false
+                    },
+                    "email": {
+                        "type": "string",
+                        "example": "john.doe@example.com",
+                        "nullable": false,
+                        "uniqueItems": true
+                    },
+                    "vat": {
+                        "type": "integer",
+                        "example": 159166801,
+                        "nullable": false,
+                        "uniqueItems": true
+                    },
+                    "address": {
+                        "type": "string",
+                        "example": "Maria Moutinho, 777",
+                        "nullable": true
+                    },
+                    "birthDate": {
+                        "type": "string",
+                        "example": "1985-04-01",
+                        "nullable": false
+                    },
+                    "createdAt": {
+                        "type": "string",
+                        "example": null,
+                        "nullable": true
+                    },
+                    "updatedAt": {
+                        "type": "string",
+                        "example": null,
+                        "nullable": true
+                    }                    
+                }
+            }
+        },
+        "responses": {
+            "400BadRequest" : {
+                "description": "Bad Request",
+                "content": {
+                    "application/json": {
+                        "schema":{
+                            "type": "object",
+                            "properties": {
+                                "success" : {
+                                    "type": "boolean",
+                                    "example": false
+                                },
+                                "message": {
+                                    "type": "object",
+                                    "properties" : {
+                                        "isNumber" : {
+                                            "type": "string",
+                                            "example" : "{attribute} must be a number conforming to the specified constraints"
+                                        },
+                                        "isEmail" : {
+                                            "type": "string",
+                                            "example": "email must be an email"
+                                        },
+                                        "isDefined" : {
+                                            "type": "string",
+                                            "example": "{attribute} field was not provided"
+                                        },
+                                        "isString" : {
+                                            "type": "string",
+                                            "example": "{attribute} must be a string"
+                                        },
+                                        "minLength" : {
+                                            "type": "string",
+                                            "example": "{attribute} must be longer than or equal to 5 characters"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "404NotFound" : {
+                "description": "Not Found",
+                "content": {
+                    "application/json": {
+                        "schema":{
+                            "type": "object",
+                            "properties": {
+                                "success" : {
+                                    "type": "boolean",
+                                    "example": false
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "User not found"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "429TooManyRequests" : {
+                "description": "Too Many Requests",
+                "content": {
+                    "application/json": {
+                        "schema":{
+                            "type": "object",
+                            "properties": {
+                                "success" : {
+                                    "type": "boolean",
+                                    "example": false
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "Too Many Requests"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
