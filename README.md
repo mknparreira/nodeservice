@@ -111,11 +111,11 @@ npm i tsyringe
 ## Packages installed
 | Package | Description |
 |---------|-------------|
-| [Jest](https://github.com/facebook/jest)                                      | JavaScript Testing                            |
-| @types/jest                                                                   | Types for Jest                                |
-| [Ts-Jest](https://github.com/kulshekhar/ts-jest)                              | Allows Jest to transpile TypeScript           |
-| [Supertest](https://github.com/visionmedia/supertest)                         | HTTP assertion library                        |
-| [Eslint Plugin Jest](https://github.com/jest-community/eslint-plugin-jest)    | ESLint plugin for Jest                        |
+| [Jest](https://github.com/facebook/jest)                                      | JavaScript Testing                  |
+| @types/jest                                                                   | Types for Jest                      |
+| [Ts-Jest](https://github.com/kulshekhar/ts-jest)                              | Allows Jest to transpile TypeScript |
+| [Supertest](https://github.com/visionmedia/supertest)                         | HTTP assertion library              |
+| [Eslint Plugin Jest](https://github.com/jest-community/eslint-plugin-jest)    | ESLint plugin for Jest              |
 
 ## Commands
 ```bash
@@ -142,11 +142,11 @@ Automatically clear mock calls, instances and results before every test? ... yes
 ## Packages installed
 | Package | Description |
 |---------|-------------|
-| [Typeorm](https://typeorm.io/)                                                | ORM                                           |
-| [MySQL 2](https://github.com/sidorares/node-mysql2)                           | MySQL driver                                  |
-| @types/mysql                                                                  | Types for MySql package                       |
-| [Class Validator](https://github.com/typestack/class-validator)               | Decorator validation data                     |
-| [Class Transformer](https://github.com/typestack/class-transformer)           | Transform class as object                     |
+| [Typeorm](https://typeorm.io/)                                                | ORM                       |
+| [MySQL 2](https://github.com/sidorares/node-mysql2)                           | MySQL driver              |
+| @types/mysql                                                                  | Types for MySql package   |
+| [Class Validator](https://github.com/typestack/class-validator)               | Decorator validation data |
+| [Class Transformer](https://github.com/typestack/class-transformer)           | Transform class as object |
 
 ## Commands
 ```bash
@@ -171,10 +171,10 @@ npx typeorm init
 ## Packages installed
 | Package | Description |
 |---------|-------------|
-| [Helmet](https://helmetjs.github.io/)                                             |                                               |
-| [ESLint Plugin Security](https://github.com/nodesecurity/eslint-plugin-security)  |                                               |
-| [Express Rate Limiter Flexible](https://github.com/animir/node-rate-limiter-flexible) |                                           |
-| [CORS](https://github.com/expressjs/cors)                                         |                                               |
+| [Helmet](https://helmetjs.github.io/)                                                 | Help secure Express apps with various HTTP headers |
+| [ESLint Plugin Security](https://github.com/nodesecurity/eslint-plugin-security)      | ESLint rules for Node Security |
+| [Express Rate Limiter Flexible](https://github.com/animir/node-rate-limiter-flexible) | Limits number of actions by key and protects from DDoS and brute force attacks |
+| [CORS](https://github.com/expressjs/cors)                                             | Node.js CORS middleware |
 
 ## Commands
 ```bash
@@ -187,11 +187,17 @@ npm i -D @types/cors
 # 7 - Documentation Open API + Swagger
 ## Features
 - Swagger
+- Open API 3.0.1
 ## Packages installed
 | Package | Description |
 |---------|-------------|
-| Swagger |             |
+| [Swagger](https://github.com/scottie1984/swagger-ui-express)  | Middleware to Swagger UI |
 
+## Commands
+```bash
+npm i swagger-ui-express
+npm i -D @types/swagger-ui-express
+```
 # 8 - Authorization with Passport + Roles & Permissions
 ## Features
 - Integrated with Passport + JWT (Jason Web Tokens)
@@ -228,6 +234,7 @@ npm i -D @types/cors
 | [Sinon](https://sinonjs.org/) | Spies, Stubs and Mocks |
 | Cron Jobs |           |
 | Conditional Requests Headers | Last-Modified, Etag, If-Modified-Since, If-None-Match|
+| Prepare for production: typeorm config, exclude some files and directory |
 
 # Reference
 - [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
