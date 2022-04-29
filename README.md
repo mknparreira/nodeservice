@@ -236,7 +236,7 @@ npm i -D @types/swagger-ui-express
 | [Sinon](https://sinonjs.org/) | Spies, Stubs and Mocks |
 | Cron Jobs |           |
 | Conditional Requests Headers | Last-Modified, Etag, If-Modified-Since, If-None-Match |
-| Prepare for production: typeorm config, exclude some files and directory into the dist directory. Such as _test_ | |
+| Fixed some issues when prepare project for production. | |
 | Transaction ID | |
 
 # Reference
