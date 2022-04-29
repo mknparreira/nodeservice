@@ -12,7 +12,7 @@ This project will be divided by phases:
 5. Database + TypeORM **(done)**
 6. Security Practices **(done)**
 7. Open API Documentation with Swagger **(done)**
-8. Authorization with Passport + Roles & Permissions 
+8. Authorization with JWT 
 9. Monitoring + Perfomance
 10. Some issues
 # 1 - Instalation & Configuration
@@ -198,15 +198,14 @@ npm i -D @types/cors
 npm i swagger-ui-express
 npm i -D @types/swagger-ui-express
 ```
-# 8 - Authorization with Passport + Roles & Permissions
+# 8 - Authorization with JWT
 ## Features
-- Integrated with Passport + JWT (Jason Web Tokens)
+- Integrated with JWT (Jason Web Tokens)
 - Users password with Bcrypt
 - Support blocklisting JWTs
 ## Packages installed
 | Package | Description |
 |---------|-------------|
-| [Passaport](https://github.com/jaredhanson/passport) |                                               |
 | [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md) |  |
 
 # 9 - Monitoring + Perfomance
@@ -222,6 +221,9 @@ npm i -D @types/swagger-ui-express
 | [Gzip Compression](https://github.com/expressjs/compression) | Node.js compression middleware |
 | [Diagnose Performance](https://clinicjs.org/) |  |
 | [PM2](https://github.com/Unitech/pm2) |  |
+| [Express Status Monitor](https://github.com/RafalWilinski/express-status-monitor) |  |
+| [Response Time](https://github.com/expressjs/response-time) | |
+
 # 10 - Future issues
 ## Features
 | Package | Description |
@@ -233,8 +235,9 @@ npm i -D @types/swagger-ui-express
 | [Validate JSON Schema](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/validation.md) |  |
 | [Sinon](https://sinonjs.org/) | Spies, Stubs and Mocks |
 | Cron Jobs |           |
-| Conditional Requests Headers | Last-Modified, Etag, If-Modified-Since, If-None-Match|
-| Prepare for production: typeorm config, exclude some files and directory |
+| Conditional Requests Headers | Last-Modified, Etag, If-Modified-Since, If-None-Match |
+| Prepare for production: typeorm config, exclude some files and directory into the dist directory. Such as _test_ | |
+| Transaction ID | |
 
 # Reference
 - [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
@@ -247,9 +250,11 @@ npm i -D @types/swagger-ui-express
 - [TypeScript Decorators](https://stackoverflow.com/questions/49352943/how-to-get-parameters-name-within-decorators)
 - [Example Boilerplate](https://github.com/vassalloandrea/express-template/)
 - [Example Boilerplate](https://github.com/santoshshinde2012/node-boilerplate)
+- [Example Boilerplate](https://github.com/santiq/bulletproof-nodejs)
 - [Example Boilerplate](https://github.com/bartosz-io/budget-node)
 - [Example Boilerplate](https://github.com/Rocketseat/umbriel)
 - [Example Boilerplate](https://github.com/phatvo21/task-management)
 - [Example Boilerplate](https://github.com/sahat/hackathon-starter)
 - [Brute Force Protectiion](https://medium.com/@animirr/brute-force-protection-node-js-examples-cd58e8bd9b8d)
 - [Node Express Helmet](https://betterprogramming.pub/nodejs-express-helmet-aa58c09c55c5)
+- [Clean Architecture Node Use Case](https://github.com/royib/clean-architecture-node)
