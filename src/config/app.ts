@@ -6,6 +6,7 @@ import RateLimitMiddleware from '../middlewares/rateLimit-middleware';
 import cors from 'cors';
 import swaggetUI from 'swagger-ui-express';
 import userDoc from '../components/user/user-documentation.json';
+import responseTime from 'response-time';
 export default class App {
   public app: Application;
 
@@ -33,6 +34,7 @@ export default class App {
     this.app.use(helmet());
     this.app.use(RateLimitMiddleware);
     this.app.use(cors());
+    this.app.use(responseTime());
   }
 
   private swaggerDocs(): void {
