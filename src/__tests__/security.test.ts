@@ -4,7 +4,7 @@ import App from '../config/app';
 import routes from '../components/user/user-router';
 import express from 'express';
 
-describe('User Controller', () => {
+describe('Security feature', () => {
   let app: express.Application;
 
   beforeAll(async() => {
@@ -21,7 +21,7 @@ describe('User Controller', () => {
     await connection.close();
   });
 
-  it('should implement CORS', async() => {
+  it('should implements CORS', async() => {
     const { headers } = await request(app).get('/');
 
     expect(headers['access-control-allow-origin']).toBe('*');
