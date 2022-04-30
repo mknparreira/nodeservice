@@ -41,7 +41,7 @@ export class UserController {
     }
   }
 
-  @validateRequest(User)
+  @validateRequest(User, { groups: ['create'] })
   async create(req: Request, res: Response, next: NextFunction) : Promise<Response | void> {
     try {
       const result = await this.userService.create(req.body);
@@ -52,7 +52,7 @@ export class UserController {
     }
   }
 
-  @validateRequest(User)
+  @validateRequest(User, { groups: ['edit'] })
   async edit(req: Request, res: Response, next: NextFunction) : Promise<Response | void> {
     	try {
     		const result = await this.userService.edit(req.body);
