@@ -214,6 +214,7 @@ npm i -D @types/swagger-ui-express
 - Gzip Compression
 - Diagnose Perfomance
 - Caching strategy
+- Added HTTP Header X-Response-Time
 ## Packages installed
 | Package | Description |
 |---------|-------------|
@@ -222,7 +223,13 @@ npm i -D @types/swagger-ui-express
 | [Diagnose Performance](https://clinicjs.org/) |  |
 | [PM2](https://github.com/Unitech/pm2) |  |
 | [Express Status Monitor](https://github.com/RafalWilinski/express-status-monitor) |  |
-| [Response Time](https://github.com/expressjs/response-time) | |
+| [Response Time](https://github.com/expressjs/response-time) | Added HTTP Header X-Response-Time |
+
+## Commands
+```bash
+npm i response-time
+npm i -D @types/response-time
+```
 
 # 10 - Future issues
 ## Features
