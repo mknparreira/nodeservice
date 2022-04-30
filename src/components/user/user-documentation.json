@@ -85,6 +85,9 @@
                     },
                     "429" : {
                         "$ref": "#/components/responses/429TooManyRequests"
+                    },
+                    "500" : {
+                        "$ref": "#/components/responses/500InternalServerError"
                     }
                 }
             }
@@ -121,8 +124,14 @@
                     "400" : {
                         "$ref": "#/components/responses/400BadRequest"
                     },
+                    "404" : {
+                        "$ref": "#/components/responses/404NotFound"
+                    },
                     "429" : {
                         "$ref": "#/components/responses/429TooManyRequests"
+                    },
+                    "500" : {
+                        "$ref": "#/components/responses/500InternalServerError"
                     }
                 }
             }
@@ -141,7 +150,7 @@
                         "description": "ID of vatId that needs to be listed",
                         "required": true,
                         "schema": {
-                          "type": "string"
+                            "type": "string"
                         }
                     }
                 ],
@@ -302,6 +311,26 @@
                                 "message": {
                                     "type": "string",
                                     "example": "Too Many Requests"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "500InternalServerError" : {
+                "description": "Internal Server Error",
+                "content": {
+                    "application/json": {
+                        "schema":{
+                            "type": "object",
+                            "properties": {
+                                "success" : {
+                                    "type": "boolean",
+                                    "example": false
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "ER_DUP_ENTRY: Duplicate entry | Occoured an error try to update user"
                                 }
                             }
                         }
