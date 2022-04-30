@@ -3,9 +3,10 @@ import { IsEmail, MinLength, IsString, IsDefined, IsNumber } from 'class-validat
 @Entity()
 export class User extends BaseEntity {
     @PrimaryGeneratedColumn()
-      id?: number;
+  readonly id?: number;
 
     @Column({ nullable: false })
+    @IsDefined({ message: 'name field was not provided' })
     @MinLength(5)
     @IsString()
       name?: string;
@@ -17,7 +18,8 @@ export class User extends BaseEntity {
 
     @Column({ unique: true, nullable: false, type: 'bigint' })
     @IsNumber()
-      vat?: number;
+    @IsDefined({ message: 'VAT field was not provided' })
+    readonly vat?: number;
 
     @Column({ nullable: true })
       address?: string;
