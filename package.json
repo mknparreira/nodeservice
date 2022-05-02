@@ -3,6 +3,9 @@
    "version": "1.0.0",
    "description": "A project to testing some packages and pratice some concepts",
    "main": "index.js",
+   "engines": {
+      "node": ">=14.17.3"
+   },
    "scripts": {
       "start": "nodemon",
       "start:inspect": "nodemon --inspect",
