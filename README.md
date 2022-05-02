@@ -12,7 +12,7 @@ This project will be divided by phases:
 5. Database + TypeORM **(done)**
 6. Security Practices **(done)**
 7. Open API Documentation with Swagger **(done)**
-8. Authorization with JWT + Bcrypt
+8. Authorization with JWT + Bcrypt **(in progress)**
 9. Monitoring + Perfomance
 10. Some issues
 # 1 - Instalation + Configuration
@@ -71,7 +71,7 @@ What format do you want your config file to be in?: **JSON**
 ## Packages installed
 | Package | Description |
 |---------|-------------|
-|[Config](htttps://github.com/node-config/node-config)                          | Organizes hierarchical configurations for your app |
+|[Node Config](htttps://github.com/node-config/node-config)                     | Organizes hierarchical configurations for your app |
 |[Dotenv](https://github.com/motdotla/dotenv)                                   | Loads environment variables from .env file    |
 |@types/config                                                                  | Types for Config package                      |
 |@types/dotenv                                                                  | Types for Dotenv package                      |
@@ -108,6 +108,7 @@ npm i tsyringe
 - Creating first component with TDD (Jest)
 - Using Ts-Jest (Preprocessor for Jest which allows Jest to transpile TypeScript)
 - Using Supertest (SuperTest is an HTTP assertions library that allows you to test your Node.js HTTP)
+- Configuring Visual Studio debug
 ## Packages installed
 | Package | Description |
 |---------|-------------|
@@ -133,6 +134,22 @@ Choose the test environment that will be used for testing » node
 Do you want Jest to add coverage reports? ... no
 Which provider should be used to instrument code for coverage? » v8
 Automatically clear mock calls, instances and results before every test? ... yes
+```
+Visual Studio Debug - launch.json
+```javascript
+{
+    "configurations": [
+
+        {
+            "type": "node-terminal",
+            "name": "Node Debug",
+            "request": "launch",
+            "command": "npm run start:inspect",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        }
+    ]
+}
 ```
 # 5 - Database + TypeORM
 ## Features
@@ -198,7 +215,7 @@ npm i -D @types/cors
 npm i swagger-ui-express
 npm i -D @types/swagger-ui-express
 ```
-# 8 - Authorization with JWT
+# 8 - Authorization with JWT + Bcrypt
 ## Features
 - Integrated with JWT (Jason Web Tokens)
 - Token integrated with Bcrypt
