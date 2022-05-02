@@ -1,21 +1,21 @@
 import { registerDecorator, ValidationOptions } from 'class-validator';
 
-export function IsOnlyDate(validationOptions?: ValidationOptions) {
+export function IsAplhaWithSpace(validationOptions?: ValidationOptions) {
   return function(object: object, propertyName: string) {
     registerDecorator({
-      name: 'IsOnlyDate',
+      name: 'IsAplhaWithSpace',
       target: object.constructor,
       propertyName: propertyName,
       constraints: [],
       options: {
-        message: 'The only date format valid is YYYY-mm-dd',
+        message: 'The $property attribute must be a string',
         ...validationOptions
       },
       validator: {
         validate(value: unknown) {
-          const regex = /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/;
+          const regex = /^[A-Za-zÀ-ÖÙ-öù-ÿĀ-ž ]+$/;
 
-          return typeof value === 'string' && regex.test(value);
+          return typeof value === 'string' && value.trim().length > 0 && regex.test(value);
         }
       }
     });
