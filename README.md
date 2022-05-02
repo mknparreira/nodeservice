@@ -5,17 +5,17 @@ Boilerplate for Node.js applications written with TypeScript
 Start server application with Node.js and TypeScript.
 ## Roadmap
 This project will be divided by phases:
-1. Instalation & Configuration **(done)**
+1. Instalation + Configuration **(done)**
 2. Project Structure **(done)**
 3. User component + Winston Logger + DI Container **(done)**
 4. Unit Test Cases (Jest) + Supertest + Debugging right way **(done)**
 5. Database + TypeORM **(done)**
 6. Security Practices **(done)**
 7. Open API Documentation with Swagger **(done)**
-8. Authorization with JWT 
+8. Authorization with JWT + Bcrypt
 9. Monitoring + Perfomance
 10. Some issues
-# 1 - Instalation & Configuration
+# 1 - Instalation + Configuration
 ## Features
 - Quick start
 - Integrated Linters and Code Style --- ESLint and Prettier (with their plugins)
@@ -201,7 +201,7 @@ npm i -D @types/swagger-ui-express
 # 8 - Authorization with JWT
 ## Features
 - Integrated with JWT (Jason Web Tokens)
-- Users password with Bcrypt
+- Token integrated with Bcrypt
 - Support blocklisting JWTs
 ## Packages installed
 | Package | Description |
@@ -214,7 +214,7 @@ npm i -D @types/swagger-ui-express
 - Gzip Compression
 - Diagnose Perfomance
 - Caching strategy
-- Added HTTP Header X-Response-Time
+- Added HTTP Header X-Response-Time *Added
 ## Packages installed
 | Package | Description |
 |---------|-------------|
@@ -224,6 +224,7 @@ npm i -D @types/swagger-ui-express
 | [PM2](https://github.com/Unitech/pm2) |  |
 | [Express Status Monitor](https://github.com/RafalWilinski/express-status-monitor) |  |
 | [Response Time](https://github.com/expressjs/response-time) | Added HTTP Header X-Response-Time |
+| Transaction ID  |  |
 
 ## Commands
 ```bash
@@ -243,8 +244,7 @@ npm i -D @types/response-time
 | [Sinon](https://sinonjs.org/) | Spies, Stubs and Mocks |
 | Cron Jobs |           |
 | Conditional Requests Headers | Last-Modified, Etag, If-Modified-Since, If-None-Match |
-| Fixed some issues when prepare project for production. | |
-| Transaction ID | |
+| Fixed some issues to prepare project for production. | |
 
 # Reference
 - [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
