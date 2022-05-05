@@ -45,6 +45,12 @@
                             }
                         }
                     },
+                    "401" : {
+                        "$ref": "#/components/responses/401Unauthorized"
+                    },
+                    "403" : {
+                        "$ref": "#/components/responses/403Forbidden"
+                    },
                     "429" : {
                         "$ref": "#/components/responses/429TooManyRequests"
                     }
@@ -82,6 +88,12 @@
                     },
                     "400" : {
                         "$ref": "#/components/responses/400BadRequest"
+                    },
+                    "401" : {
+                        "$ref": "#/components/responses/401Unauthorized"
+                    },
+                    "403" : {
+                        "$ref": "#/components/responses/403Forbidden"
                     },
                     "429" : {
                         "$ref": "#/components/responses/429TooManyRequests"
@@ -123,6 +135,12 @@
                     },
                     "400" : {
                         "$ref": "#/components/responses/400BadRequest"
+                    },
+                    "401" : {
+                        "$ref": "#/components/responses/401Unauthorized"
+                    },
+                    "403" : {
+                        "$ref": "#/components/responses/403Forbidden"
                     },
                     "404" : {
                         "$ref": "#/components/responses/404NotFound"
@@ -172,6 +190,12 @@
                                 }
                             }
                         }
+                    },
+                    "401" : {
+                        "$ref": "#/components/responses/401Unauthorized"
+                    },
+                    "403" : {
+                        "$ref": "#/components/responses/403Forbidden"
                     },
                     "404" : {
                         "$ref": "#/components/responses/404NotFound"
@@ -277,6 +301,46 @@
                     }
                 }
             },
+            "401Unauthorized" : {
+                "description": "Unauthorized",
+                "content": {
+                    "application/json": {
+                        "schema":{
+                            "type": "object",
+                            "properties": {
+                                "success" : {
+                                    "type": "boolean",
+                                    "example": false
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "The token was been expired or unauthorized"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "403Forbidden" : {
+                "description": "Forbidden",
+                "content": {
+                    "application/json": {
+                        "schema":{
+                            "type": "object",
+                            "properties": {
+                                "success" : {
+                                    "type": "boolean",
+                                    "example": false
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "The token is malformed or invalid"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
             "404NotFound" : {
                 "description": "Not Found",
                 "content": {
@@ -336,6 +400,13 @@
                         }
                     }
                 }
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth":{
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
             }
         }
     }
