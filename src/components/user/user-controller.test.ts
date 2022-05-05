@@ -1,7 +1,7 @@
 import * as connection from '../../config/databaseConnection';
 import request from 'supertest';
 import App from '../../config/app';
-import routes from '../../components/user/user-router';
+import routes from './user-router';
 import express from 'express';
 import { StatusCodes } from 'http-status-codes';
 
@@ -26,6 +26,7 @@ describe('User Controller', () => {
     const response = await request(app)
       .post('/user/create')
       .set('Accept', 'application/json')
+      .set('Authorization', 'token')
       .send({
         'name': 'John Doe',
         'address': null,
@@ -42,7 +43,9 @@ describe('User Controller', () => {
   });
 
   it('/users', async() => {
-    await request(app).post('/user/create').send({
+    await request(app).post('/user/create')
+    .set('Authorization', 'token')
+    .send({
       'name': 'John Doe',
       'address': null,
       'birthDate': '1985-04-01',
@@ -53,6 +56,7 @@ describe('User Controller', () => {
     const response = await request(app)
       .get('/users')
       .set('Accept', 'application/json')
+      .set('Authorization', 'token')
       .expect('Content-Type', 'application/json; charset=utf-8');
 
     expect(response.body).toBeInstanceOf(Array);
