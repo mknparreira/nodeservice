@@ -54,7 +54,10 @@
                     "429" : {
                         "$ref": "#/components/responses/429TooManyRequests"
                     }
-                }
+                },
+                "security": [{
+                    "Bearer": []
+                }]
             }
         },
 
@@ -101,7 +104,10 @@
                     "500" : {
                         "$ref": "#/components/responses/500InternalServerError"
                     }
-                }
+                },
+                "security": [{
+                    "Bearer": []
+                }]
             }
         },
 
@@ -151,7 +157,10 @@
                     "500" : {
                         "$ref": "#/components/responses/500InternalServerError"
                     }
-                }
+                },
+                "security": [{
+                    "Bearer": []
+                }]
             }
         },
 
@@ -203,7 +212,10 @@
                     "429" : {
                         "$ref": "#/components/responses/429TooManyRequests"
                     }
-                }
+                },
+                "security": [{
+                    "Bearer": []
+                }]
             }
         }
     },
@@ -403,8 +415,9 @@
             }
         },
         "securitySchemes": {
-            "bearerAuth":{
+            "Bearer":{
                 "type": "http",
+                "description": "Put a JWT token valid",
                 "scheme": "bearer",
                 "bearerFormat": "JWT"
             }
