@@ -219,12 +219,16 @@ npm i -D @types/swagger-ui-express
 ## Features
 - Integrated with JWT (Jason Web Tokens)
 - Token integrated with Bcrypt
-- Support blocklisting JWTs
 ## Packages installed
 | Package | Description |
 |---------|-------------|
-| [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md) |  |
+| [JSON Web Token](https://github.com/auth0/node-jsonwebtoken) | JsonWebToken implementation |
 
+## Commands
+```bash
+npm i jsonwebtoken
+npm i -D @types/jsonwebtoken
+```
 # 9 - Monitoring + Perfomance
 ## Features
 - Monitoring application using Pm2
@@ -262,6 +266,7 @@ npm i -D @types/response-time
 | Cron Jobs |           |
 | Conditional Requests Headers | Last-Modified, Etag, If-Modified-Since, If-None-Match |
 | Fixed some issues to prepare project for production. | |
+| [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md) | |
 
 # Reference
 - [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
@@ -283,3 +288,4 @@ npm i -D @types/response-time
 - [Node Express Helmet](https://betterprogramming.pub/nodejs-express-helmet-aa58c09c55c5)
 - [Clean Architecture Node Use Case](https://github.com/royib/clean-architecture-node)
 - [Better way to testing Middlwares](https://javascript.plainenglish.io/how-to-unit-test-express-middleware-typescript-jest-c6a7ad166e74)
+- [JWT with Express](https://www.digitalocean.com/community/tutorials/nodejs-jwt-expressjs)
