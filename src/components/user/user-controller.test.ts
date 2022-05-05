@@ -2,16 +2,16 @@ import * as connection from '../../config/databaseConnection';
 import request from 'supertest';
 import App from '../../config/app';
 import routes from './user-router';
+import authRoutes from './../auth/auth-router';
 import express from 'express';
 import { StatusCodes } from 'http-status-codes';
-
 describe('User Controller', () => {
   let app: express.Application;
 
   beforeAll(async() => {
     await connection.create();
 
-    app = new App([routes]).app;
+    app = new App([routes, authRoutes]).app;
   });
 
   afterEach(async() => {
@@ -23,10 +23,15 @@ describe('User Controller', () => {
   });
 
   it('/user/create', async() => {
+
+    const authToken = await request(app)
+    .get('/auth/getToken')
+    .set('Accept', 'application/json')
+      
     const response = await request(app)
       .post('/user/create')
       .set('Accept', 'application/json')
-      .set('Authorization', 'token')
+      .set('Authorization', `Bearer ${authToken.body.token}`)
       .send({
         'name': 'John Doe',
         'address': null,
@@ -43,8 +48,13 @@ describe('User Controller', () => {
   });
 
   it('/users', async() => {
+
+    const authToken = await request(app)
+    .get('/auth/getToken')
+    .set('Accept', 'application/json')
+
     await request(app).post('/user/create')
-    .set('Authorization', 'token')
+    .set('Authorization', `Bearer ${authToken.body.token}`)
     .send({
       'name': 'John Doe',
       'address': null,
@@ -56,7 +66,7 @@ describe('User Controller', () => {
     const response = await request(app)
       .get('/users')
       .set('Accept', 'application/json')
-      .set('Authorization', 'token')
+      .set('Authorization', `Bearer ${authToken.body.token}`)
       .expect('Content-Type', 'application/json; charset=utf-8');
 
     expect(response.body).toBeInstanceOf(Array);
@@ -67,7 +77,13 @@ describe('User Controller', () => {
   });
 
   it('/user/show/:id', async() => {
-    await request(app).post('/user/create').send({
+    const authToken = await request(app)
+    .get('/auth/getToken')
+    .set('Accept', 'application/json')
+    
+    await request(app).post('/user/create')
+    .set('Authorization', `Bearer ${authToken.body.token}`)
+    .send({
       'name': 'John Doe',
       'address': null,
       'birthDate': '1985-04-01',
@@ -78,6 +94,7 @@ describe('User Controller', () => {
     const response = await request(app)
       .get('/user/show/30')
       .set('Accept', 'application/json')
+      .set('Authorization', `Bearer ${authToken.body.token}`)
       .expect('Content-Type', 'application/json; charset=utf-8');
 
     expect(response.body).toBeInstanceOf(Object);
@@ -87,7 +104,13 @@ describe('User Controller', () => {
   });
 
   it('/user/edit', async() => {
-    await request(app).post('/user/create').send({
+    const authToken = await request(app)
+    .get('/auth/getToken')
+    .set('Accept', 'application/json')
+    
+    await request(app).post('/user/create')
+    .set('Authorization', `Bearer ${authToken.body.token}`)
+    .send({
       'name': 'John Doe',
       'address': null,
       'birthDate': '1985-04-01',
@@ -98,6 +121,7 @@ describe('User Controller', () => {
     const response = await request(app)
       .put('/user/edit')
       .set('Accept', 'application/json')
+      .set('Authorization', `Bearer ${authToken.body.token}`)
       .send({
         'name': 'John Deo Jr',
         'address': null,

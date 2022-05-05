@@ -1,7 +1,7 @@
-import 'jest';
 import * as connection from '../../config/databaseConnection';
 import App from '../../config/app';
 import routes from '../../components/user/user-router';
+import authRoutes from '../../components/auth/auth-router';
 
 import express from 'express';
 import request from 'supertest';
@@ -13,7 +13,7 @@ describe('Rate Limit Feature', () => {
   beforeAll(async() => {
     await connection.create();
 
-    app = new App([routes]).app;
+    app = new App([routes, authRoutes]).app;
   });
 
   afterEach(async() => {
@@ -26,10 +26,14 @@ describe('Rate Limit Feature', () => {
 
   it('should implement Rate Limit', async() => {
     const response = [];
+    const authToken = await request(app)
+    .get('/auth/getToken')
+    .set('Accept', 'application/json')
 
     for (let i = 0; i < 5; i++) {
       const resp = await request(app)
         .get('/users')
+        .set('Authorization', `Bearer ${authToken.body.token}`)
         .set('Accept', 'application/json');
 
       response.push(resp.statusCode);
