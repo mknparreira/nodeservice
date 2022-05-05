@@ -15,5 +15,9 @@ export default {
     points: process.env.RATELIMIT_POINTS,
     duration: process.env.RATELIMIT_DURATION,
     blockDuration: process.env.RATELIMIT_BLOCK_DURATION
+  },
+  jwt: {
+    secret: process.env.JWT_SECRET,
+    expiresIn: process.env.JWT_EXPIRES_IN
   }
 };
