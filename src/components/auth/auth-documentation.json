@@ -1,0 +1,89 @@
+{
+    "openapi": "3.0.1",
+    
+    "info": {
+        "title": "Nodeservice",
+        "description": "This is a skeleton for Node.js applications written in TypeScript",
+        "contact": {
+            "name" : "Maikon Parreira",
+            "url"  : "https://github.com/mknparreira/nodeservice",
+            "email": "mknparreira@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+
+    "servers" : [
+        {
+            "url" : "http://localhost:3000",
+            "description": "Development"
+        }
+    ],
+
+    "paths" : {
+        "/auth/getToken" : {
+            "get" : {
+                "summary" : "Take a JWT token",
+                "description": "To access the Nodeservice, it will be necessary to take a JWT token",
+                "operationId": "generateAuthToken",
+                "tags": ["Auth"],
+                "requestBody": {
+                    "content": {
+                        "application/json": {}
+                    }
+                },
+                "responses": {
+                    "200" : {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/GetToken"
+                                }
+                            }
+                        }
+                    },
+                    "500" : {
+                        "$ref": "#/components/responses/500InternalServerError"
+                    }
+                }
+            }
+        }
+    },
+
+    "components": {
+        "schemas": { 
+            "GetToken" : {
+                "type": "object",
+                "properties": {
+                    "token": {
+                        "type": "string",
+                        "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+                    }
+                }
+            }
+        },
+        "responses": {
+            "500InternalServerError" : {
+                "description": "Internal Server Error",
+                "content": {
+                    "application/json": {
+                        "schema":{
+                            "type": "object",
+                            "properties": {
+                                "success" : {
+                                    "type": "boolean",
+                                    "example": false
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "Its not possible to get a JWT token"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
