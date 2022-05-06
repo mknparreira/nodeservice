@@ -257,13 +257,12 @@ npm i -D @types/jsonwebtoken
 npm i response-time
 npm i -D @types/response-time
 ```
-
-# 10 - Future issues
+# 10 - Future features
 ## Features
 | Package | Description |
 |---------|-------------|
 | Cluster |             |
-| Closures |            |
+| Closures|             |
 | [Publisher Subscriber Models (Pub/Sub)](https://faye.jcoglan.com/) |  |
 | [Husky](https://github.com/typicode/husky) |  |
 | [Validate JSON Schema](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/validation.md) |  |
