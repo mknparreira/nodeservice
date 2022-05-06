@@ -266,7 +266,6 @@ npm i -D @types/response-time
 | [Publisher Subscriber Models (Pub/Sub)](https://faye.jcoglan.com/) |  |
 | [Husky](https://github.com/typicode/husky) |  |
 | [Validate JSON Schema](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/validation.md) |  |
-| [Sinon](https://sinonjs.org/) | Spies, Stubs and Mocks |
 | Cron Jobs |           |
 | Conditional Requests Headers | Last-Modified, Etag, If-Modified-Since, If-None-Match |
 | [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md) | |
