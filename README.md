@@ -227,7 +227,7 @@ npm i -D @types/swagger-ui-express
 ## Packages installed
 | Package | Description |
 |---------|-------------|
-| [JSON Web Token](https://github.com/auth0/node-jsonwebtoken) | JsonWebToken implementation |
+| [Jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) | JWT implementation for Node |
 
 ## Commands
 ```bash
@@ -249,7 +249,7 @@ npm i -D @types/jsonwebtoken
 | [Diagnose Performance](https://clinicjs.org/) |  |
 | [PM2](https://github.com/Unitech/pm2) |  |
 | [Express Status Monitor](https://github.com/RafalWilinski/express-status-monitor) |  |
-| [Response Time](https://github.com/expressjs/response-time) | Added HTTP Header X-Response-Time |
+| [Response Time](https://github.com/expressjs/response-time) | HTTP Header X-Response-Time |
 | Transaction ID  |  |
 
 ## Commands
@@ -269,11 +269,10 @@ npm i -D @types/response-time
 | [Sinon](https://sinonjs.org/) | Spies, Stubs and Mocks |
 | Cron Jobs |           |
 | Conditional Requests Headers | Last-Modified, Etag, If-Modified-Since, If-None-Match |
-| Fixed some issues to prepare project for production. | |
 | [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md) | |
 | Bcrypt |              |
 
-# Reference
+# References
 - [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 - [Node Best Practices](https://softwareontheroad.com/ideal-nodejs-project-structure/)
 - [Winston Quick Start](https://github.com/winstonjs/winston/blob/master/examples/quick-start.js)
