@@ -6,6 +6,7 @@ import RateLimitMiddleware from '../middlewares/rateLimit-middleware';
 import cors from 'cors';
 import swaggetUI from 'swagger-ui-express';
 import userDoc from '../components/user/user-documentation.json';
+import authDoc from '../components/auth/auth-documentation.json';
 import responseTime from 'response-time';
 export default class App {
   public app: Application;
@@ -39,6 +40,7 @@ export default class App {
 
   private swaggerDocs(): void {
     this.app.use('/api-docs/user', swaggetUI.serveFiles(userDoc), swaggetUI.setup(userDoc));
+    this.app.use('/api-docs/auth', swaggetUI.serveFiles(authDoc), swaggetUI.setup(authDoc));
   }
 
   public listen(port : string, callback : Callback) {
