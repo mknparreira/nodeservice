@@ -2,10 +2,11 @@ import { NextFunction, Request, Response } from 'express';
 import { RateLimiterMySQL } from 'rate-limiter-flexible';
 import { Connection, getConnection, QueryRunner } from 'typeorm';
 import TooManyConnections from '../exceptions/tooManyConnections-exception';
-import { RateLimitHeaders } from '../interfaces/rateLimitHeaders-interface';
-import { RateLimitType } from '../interfaces/rateLimitType-interface';
 import path from 'path';
-import { RateLimitOptions } from '../interfaces/rateLimitOptions-interface';
+import {
+  RateLimitHeaders, RateLimitOptions,
+  RateLimitType
+} from '../components/rateLimit/rateLimit-type';
 
 const dirname = path.join(path.resolve(), '/src');
 
