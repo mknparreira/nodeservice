@@ -8,13 +8,13 @@ This project will be divided by phases:
 1. Instalation + Configuration **(done)**
 2. Project Structure **(done)**
 3. User component + Winston Logger + DI Container **(done)**
-4. Unit Test Cases (Jest) + Supertest + Debugging right way **(done)**
+4. Unit Test Cases (Jest) + Supertest + Debugging the right way **(done)**
 5. Database + TypeORM **(done)**
 6. Security Practices **(done)**
 7. Open API Documentation with Swagger **(done)**
-8. Authorization with JWT + Bcrypt **(in progress)**
-9. Monitoring + Perfomance
-10. Some issues
+8. Authorization with JWT token **(done)**
+9. Monitoring + Perfomance **(in progress)**
+10. Future issues
 # 1 - Instalation + Configuration
 ## Features
 - Quick start
@@ -102,13 +102,13 @@ npm i http-status-codes
 npm i reflect-metadata
 npm i tsyringe
 ```
-# 4 - Unit Test Cases (Jest) + Supertest + Debugging right way
+# 4 - Unit Test Cases (Jest) + Supertest + Debugging the right way
 ## Features
 - Integrated Open API
 - Creating first component with TDD (Jest)
 - Using Ts-Jest (Preprocessor for Jest which allows Jest to transpile TypeScript)
 - Using Supertest (SuperTest is an HTTP assertions library that allows you to test your Node.js HTTP)
-- Configuring Visual Studio debug
+- Configuring Visual Studio Code debug
 ## Packages installed
 | Package | Description |
 |---------|-------------|
@@ -135,7 +135,7 @@ Do you want Jest to add coverage reports? ... no
 Which provider should be used to instrument code for coverage? » v8
 Automatically clear mock calls, instances and results before every test? ... yes
 ```
-Visual Studio Debug - launch.json
+## Visual Studio Debug - launch.json
 ```javascript
 {
     "configurations": [
@@ -215,10 +215,15 @@ npm i -D @types/cors
 npm i swagger-ui-express
 npm i -D @types/swagger-ui-express
 ```
-# 8 - Authorization with JWT + Bcrypt
+## Documentation
+| Component | Description |
+|---------|-------------|
+| [User](http://localhost:3000/api-docs/user/)  | User component documentation |
+| [Auth](http://localhost:3000/api-docs/auth/)  | Auth component documentation |
+
+# 8 - Authorization with JWT token
 ## Features
 - Integrated with JWT (Jason Web Tokens)
-- Token integrated with Bcrypt
 ## Packages installed
 | Package | Description |
 |---------|-------------|
@@ -235,7 +240,7 @@ npm i -D @types/jsonwebtoken
 - Gzip Compression
 - Diagnose Perfomance
 - Caching strategy
-- Added HTTP Header X-Response-Time *Added
+- Added HTTP Header X-Response-Time
 ## Packages installed
 | Package | Description |
 |---------|-------------|
@@ -267,6 +272,7 @@ npm i -D @types/response-time
 | Conditional Requests Headers | Last-Modified, Etag, If-Modified-Since, If-None-Match |
 | Fixed some issues to prepare project for production. | |
 | [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md) | |
+| Bcrypt |              |
 
 # Reference
 - [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
