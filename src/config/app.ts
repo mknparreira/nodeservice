@@ -8,6 +8,7 @@ import swaggetUI from 'swagger-ui-express';
 import userDoc from '../components/user/user-documentation.json';
 import authDoc from '../components/auth/auth-documentation.json';
 import responseTime from 'response-time';
+import compression from 'compression';
 export default class App {
   public app: Application;
 
@@ -36,6 +37,13 @@ export default class App {
     this.app.use(RateLimitMiddleware);
     this.app.use(cors());
     this.app.use(responseTime());
+    this.app.use(compression({
+      level: 6,
+      filter: (req, res) => {
+        if (req.headers['x-no-compression']) return false;
+        return compression.filter(req, res);
+      }
+    }));
   }
 
   private swaggerDocs(): void {

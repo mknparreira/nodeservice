@@ -28,6 +28,7 @@
    },
    "homepage": "https://github.com/mknparreira/nodeservice#readme",
    "devDependencies": {
+      "@types/compression": "^1.7.2",
       "@types/config": "^0.0.41",
       "@types/cors": "^2.8.12",
       "@types/dotenv": "^8.2.0",
@@ -60,6 +61,7 @@
    "dependencies": {
       "@types/mysql": "^2.15.21",
       "class-transformer": "^0.5.1",
+      "compression": "^1.7.4",
       "config": "^3.3.7",
       "cors": "^2.8.5",
       "express": "^4.17.2",

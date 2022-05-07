@@ -244,18 +244,22 @@ npm i -D @types/jsonwebtoken
 ## Packages installed
 | Package | Description |
 |---------|-------------|
+| [Gzip Compression](https://github.com/expressjs/compression) | Node.js compression middleware **(done)** |
+| [Response Time](https://github.com/expressjs/response-time) | HTTP Header X-Response-Time **(done)** |
 | [Cache API Request with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7) |               |
-| [Gzip Compression](https://github.com/expressjs/compression) | Node.js compression middleware |
 | [Diagnose Performance](https://clinicjs.org/) |  |
 | [PM2](https://github.com/Unitech/pm2) |  |
 | [Express Status Monitor](https://github.com/RafalWilinski/express-status-monitor) |  |
-| [Response Time](https://github.com/expressjs/response-time) | HTTP Header X-Response-Time |
 | Transaction ID  |  |
 
 ## Commands
 ```bash
 npm i response-time
 npm i -D @types/response-time
+
+npm i compression
+npm i -D @types/compression
+
 ```
 # 10 - Future features
 ## Features
