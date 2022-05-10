@@ -5,16 +5,16 @@ Boilerplate for Node.js applications written with TypeScript
 Start server application with Node.js and TypeScript.
 ## Roadmap
 This project will be divided by phases:
-1. Instalation + Configuration **(done)**
-2. Project Structure **(done)**
-3. User component + Winston Logger + DI Container **(done)**
-4. Unit Test Cases (Jest) + Supertest + Debugging the right way **(done)**
-5. Database + TypeORM **(done)**
-6. Security Practices **(done)**
-7. Open API Documentation with Swagger **(done)**
-8. Authorization with JWT token **(done)**
-9. Monitoring + Perfomance **(in progress)**
-10. Future issues
+[1.](#1) Instalation + Configuration **(done)**
+[2.](#2) Project Structure **(done)**
+[3.](#3) User component + Winston Logger + DI Container **(done)**
+[4.](#4) Unit Test Cases (Jest) + Supertest + Debugging the right way **(done)**
+[5.](#5) Database + TypeORM **(done)**
+[6.](#6) Security Practices **(done)**
+[7.](#7) Open API Documentation with Swagger **(done)**
+[8.](#8) Authorization with JWT token **(done)**
+[9.](#9) Monitoring + Perfomance **(in progress)**
+[10.](#10) Future issues
 # 1 - Instalation + Configuration
 ## Features
 - Quick start
@@ -239,14 +239,12 @@ npm i -D @types/jsonwebtoken
 - Monitoring application using Pm2
 - Gzip Compression
 - Diagnose Perfomance
-- Caching strategy
 - Added HTTP Header X-Response-Time
 ## Packages installed
 | Package | Description |
 |---------|-------------|
 | [Gzip Compression](https://github.com/expressjs/compression) | Node.js compression middleware **(done)** |
 | [Response Time](https://github.com/expressjs/response-time) | HTTP Header X-Response-Time **(done)** |
-| [Cache API Request with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7) |               |
 | [Diagnose Performance](https://clinicjs.org/) |  |
 | [PM2](https://github.com/Unitech/pm2) |  |
 | [Express Status Monitor](https://github.com/RafalWilinski/express-status-monitor) |  |
@@ -269,11 +267,11 @@ npm i -D @types/compression
 | Closures|             |
 | [Publisher Subscriber Models (Pub/Sub)](https://faye.jcoglan.com/) |  |
 | [Husky](https://github.com/typicode/husky) |  |
-| [Validate JSON Schema](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/validation.md) |  |
 | Cron Jobs |           |
 | Conditional Requests Headers | Last-Modified, Etag, If-Modified-Since, If-None-Match |
 | [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md) | |
 | Bcrypt |              |
+| [Cache API with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7) |               |
 
 # References
 - [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
