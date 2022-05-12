@@ -236,19 +236,17 @@ npm i -D @types/jsonwebtoken
 ```
 # 9 - Monitoring + Perfomance
 ## Features
-- Monitoring application using Pm2
 - Gzip Compression
-- Diagnose Perfomance
 - Added HTTP Header X-Response-Time
+- Added HTTP Header Request-Id
+- Express Status Monitor
 ## Packages installed
 | Package | Description |
 |---------|-------------|
 | [Gzip Compression](https://github.com/expressjs/compression) | Node.js compression middleware **(done)** |
 | [Response Time](https://github.com/expressjs/response-time) | HTTP Header X-Response-Time **(done)** |
-| [Diagnose Performance](https://clinicjs.org/) |  |
-| [PM2](https://github.com/Unitech/pm2) |  |
-| [Express Status Monitor](https://github.com/RafalWilinski/express-status-monitor) |  |
-| Transaction ID  |  |
+| [HTTP Header Request-Id](https://github.com/floatdrop/express-request-id) | HTTP Header Request-Id |
+| [Express Status Monitor](https://github.com/RafalWilinski/express-status-monitor) | Realtime Monitoring for Node  |
 
 ## Commands
 ```bash
