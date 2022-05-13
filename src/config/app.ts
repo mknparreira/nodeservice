@@ -9,6 +9,7 @@ import userDoc from '../components/user/user-documentation.json';
 import authDoc from '../components/auth/auth-documentation.json';
 import responseTime from 'response-time';
 import compression from 'compression';
+import RequestId from '../middlewares/requestId-middleware';
 export default class App {
   public app: Application;
 
@@ -44,6 +45,7 @@ export default class App {
         return compression.filter(req, res);
       }
     }));
+    this.app.use(RequestId);
   }
 
   private swaggerDocs(): void {

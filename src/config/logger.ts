@@ -38,6 +38,7 @@ const formats = combine(
 const Logger = createLogger({
     levels : levels,
     format : formats,
+    defaultMeta: { service: 'nodeservice' },
     transports : [
         transp.console, transp.fileError, transp.fileWarning
     ]

@@ -14,6 +14,10 @@ function ErrorHandlerMiddleware(error : DefaultException, req: Request,
     Logger.error(`HTTP Status Code: ${status} - Message: ${message} - 
         Error: ${JSON.stringify(error.stack, null, 4)}`);
 
+    const childLogger = Logger.child({ feature: 'x-Request-Id' });
+
+    childLogger.error(`X-Request-Id: ${res.get('X-Request-Id') ?? null}`);
+
     res.status(status).json({
       message: message,
       success: false

@@ -98,6 +98,7 @@ npm i @types/config -D
 ## Commands
 ```bash
 npm i winston
+npm i @types/winston -D
 npm i http-status-codes
 npm i reflect-metadata
 npm i tsyringe
@@ -238,15 +239,14 @@ npm i -D @types/jsonwebtoken
 ## Features
 - Gzip Compression
 - Added HTTP Header X-Response-Time
-- Added HTTP Header Request-Id
+- Created a middleware to generate HTTP Header X-Request-Id
 - Express Status Monitor
 ## Packages installed
 | Package | Description |
 |---------|-------------|
 | [Gzip Compression](https://github.com/expressjs/compression) | Node.js compression middleware **(done)** |
 | [Response Time](https://github.com/expressjs/response-time) | HTTP Header X-Response-Time **(done)** |
-| [HTTP Header Request-Id](https://github.com/floatdrop/express-request-id) | HTTP Header Request-Id |
-| [Express Status Monitor](https://github.com/RafalWilinski/express-status-monitor) | Realtime Monitoring for Node  |
+| [UUID](https://github.com/uuidjs/uuid) | UUID to use on middlware to genrates HTTP Header X-Request-Id  |
 
 ## Commands
 ```bash
@@ -255,6 +255,9 @@ npm i -D @types/response-time
 
 npm i compression
 npm i -D @types/compression
+
+npm i uuid
+npm i -D @types/uuid
 
 ```
 # 10 - Future features
