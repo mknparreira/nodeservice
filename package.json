@@ -15,7 +15,8 @@
       "lint": "npm run pretty && npx eslint src/**/*.ts --fix",
       "pretty": "prettier --write src/**/*.ts",
       "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
-      "clear": "rimraf dist/"
+      "clear": "rimraf dist/",
+      "artillery" : "npx artillery run artillery.yaml -o artillery/report.json"
    },
    "repository": {
       "type": "git",
@@ -43,6 +44,7 @@
       "@types/winston": "^2.4.4",
       "@typescript-eslint/eslint-plugin": "^5.23.0",
       "@typescript-eslint/parser": "^5.23.0",
+      "artillery": "^2.0.0-16",
       "class-validator": "^0.13.2",
       "dotenv": "^16.0.1",
       "eslint": "^8.15.0",

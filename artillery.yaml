@@ -1,0 +1,14 @@
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 30
+      arrivalRate: 10
+  defaults:
+    headers:
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NTI2MzY2MjEsImV4cCI6MTY1MjY0MDIyMX0.waUNdyE30OeDUQ9t_CDWTYXzkIxodpyAcS3qVyPpVbM'
+
+scenarios:
+  - name: "First Scenario"
+    flow:
+      - get:
+          url: "/users"
