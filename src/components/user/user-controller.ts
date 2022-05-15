@@ -59,7 +59,7 @@ export class UserController {
 
     		if (!result) throw new BadRequestException('Occoured an error try to update user');
     		if (!result.affected) throw new NotFoundException('The user cannot be found');
-    		return res.status(StatusCodes.OK).json('The resource successfully updated');
+    		return res.status(StatusCodes.NO_CONTENT).json('The resource successfully updated');
     	} catch (error) {
     		next(error);
     	}

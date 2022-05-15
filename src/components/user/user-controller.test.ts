@@ -132,6 +132,6 @@ describe('User Controller', () => {
       .expect('Content-Type', 'application/json; charset=utf-8');
 
     expect(response.body).toBe('The resource successfully updated');
-    expect(response.status).toBe(StatusCodes.OK);
+    expect(response.status).toBe(StatusCodes.NO_CONTENT);
   });
 });
