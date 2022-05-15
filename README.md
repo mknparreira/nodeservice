@@ -271,7 +271,7 @@ npm i -D @types/uuid
 | Conditional Requests Headers (Last-Modified, Etag, If-Modified-Since, If-None-Match) ||
 | [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md) | Chapter #8 - Authorization with JWT token |
 | Bcrypt | Chapter #6 - Security Practices |
-| [Cache API with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7) | Chapter #9 - Monitoring + Perfomance |
+| [Cache API with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7) + HTTP Headers Expires and Cache-Control | Chapter #9 - Monitoring + Perfomance |
 
 # References
 ## Chapter #1 - Instalation + Configuration
