@@ -241,12 +241,14 @@ npm i -D @types/jsonwebtoken
 - Added HTTP Header X-Response-Time
 - Created a middleware to generate HTTP Header X-Request-Id
 - Express Status Monitor
+- Perfomance testing with Artillery
 ## Packages installed
 | Package | Description |
 |---------|-------------|
 | [Gzip Compression](https://github.com/expressjs/compression) | Node.js compression middleware **(done)** |
 | [Response Time](https://github.com/expressjs/response-time) | HTTP Header X-Response-Time **(done)** |
 | [UUID](https://github.com/uuidjs/uuid) | UUID to use on middlware to genrates HTTP Header X-Request-Id  |
+| [Artillery](https://github.com/artilleryio/artillery) | Tests that put load on a system and verify that a system is working as expected  |
 
 ## Commands
 ```bash
