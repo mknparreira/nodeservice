@@ -5,16 +5,16 @@ Boilerplate for Node.js applications written with TypeScript
 Start server application with Node.js and TypeScript.
 ## Roadmap
 This project will be divided by phases:
-[1.](#1) Instalation + Configuration **(done)**
-[2.](#2) Project Structure **(done)**
-[3.](#3) User component + Winston Logger + DI Container **(done)**
-[4.](#4) Unit Test Cases (Jest) + Supertest + Debugging the right way **(done)**
-[5.](#5) Database + TypeORM **(done)**
-[6.](#6) Security Practices **(done)**
-[7.](#7) Open API Documentation with Swagger **(done)**
-[8.](#8) Authorization with JWT token **(done)**
-[9.](#9) Monitoring + Perfomance **(in progress)**
-[10.](#10) Future issues
+1. Instalation + Configuration **(done)**
+2. Project Structure **(done)**
+3. User component + Winston Logger + DI Container **(done)**
+4. Unit Test Cases (Jest) + Supertest + Debugging the right way **(done)**
+5. Database + TypeORM **(done)**
+6. Security Practices **(done)**
+7. Open API Documentation with Swagger **(done)**
+8. Authorization with JWT token **(done)**
+9. Monitoring + Perfomance **(done)**
+10. Future issues
 # 1 - Instalation + Configuration
 ## Features
 - Quick start
