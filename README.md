@@ -264,34 +264,41 @@ npm i -D @types/uuid
 ## Features
 | Package | Description |
 |---------|-------------|
-| Cluster |             |
-| Closures|             |
+| Node.js Cluster | Chapter #9 - Monitoring + Perfomance |
 | [Publisher Subscriber Models (Pub/Sub)](https://faye.jcoglan.com/) |  |
 | [Husky](https://github.com/typicode/husky) |  |
 | Cron Jobs |           |
-| Conditional Requests Headers | Last-Modified, Etag, If-Modified-Since, If-None-Match |
-| [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md) | |
-| Bcrypt |              |
-| [Cache API with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7) |               |
+| Conditional Requests Headers (Last-Modified, Etag, If-Modified-Since, If-None-Match) ||
+| [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md) | Chapter #8 - Authorization with JWT token |
+| Bcrypt | Chapter #6 - Security Practices |
+| [Cache API with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7) | Chapter #9 - Monitoring + Perfomance |
 
 # References
+## Chapter #1 - Instalation + Configuration
+- [Libraries you should use for every Node Express project](https://dev.to/wizbuntu/top-15-libraries-you-should-use-for-every-node-express-backend-project-3k23)
 - [Node Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 - [Node Best Practices](https://softwareontheroad.com/ideal-nodejs-project-structure/)
-- [Winston Quick Start](https://github.com/winstonjs/winston/blob/master/examples/quick-start.js)
-- [Write README.md](https://stackedit.io/app)
-- [Error Handling in Express](https://medium.com/@utkuu/error-handling-in-express-js-and-express-async-errors-package-639c91ba3aa2)
-- [Libraries you should use for every Node Express project](https://dev.to/wizbuntu/top-15-libraries-you-should-use-for-every-node-express-backend-project-3k23)
+## Chapter #2 - Project Structurer
+- [Clean Architecture Node Use Case](https://github.com/royib/clean-architecture-node)
 - [Handling errors in Express async middleware](https://stackoverflow.com/questions/51391080/handling-errors-in-express-async-middleware)
-- [TypeScript Decorators](https://stackoverflow.com/questions/49352943/how-to-get-parameters-name-within-decorators)
-- [Example Boilerplate](https://github.com/vassalloandrea/express-template/)
-- [Example Boilerplate](https://github.com/santoshshinde2012/node-boilerplate)
-- [Example Boilerplate](https://github.com/santiq/bulletproof-nodejs)
-- [Example Boilerplate](https://github.com/bartosz-io/budget-node)
-- [Example Boilerplate](https://github.com/Rocketseat/umbriel)
-- [Example Boilerplate](https://github.com/phatvo21/task-management)
-- [Example Boilerplate](https://github.com/sahat/hackathon-starter)
+## Chapter #3 - User component + Winston Logger + DI Container
+- [Winston Quick Start](https://github.com/winstonjs/winston/blob/master/examples/quick-start.js)
+- [Error Handling in Express](https://medium.com/@utkuu/error-handling-in-express-js-and-express-async-errors-package-639c91ba3aa2)
+## Chapter #4 - Unit Test Cases (Jest) + Supertest + Debugging the right way
+- [Better way to testing Middlwares](https://javascript.plainenglish.io/how-to-unit-test-express-middleware-typescript-jest-c6a7ad166e74)
+## Chapter #6 - Security Practices
 - [Brute Force Protectiion](https://medium.com/@animirr/brute-force-protection-node-js-examples-cd58e8bd9b8d)
 - [Node Express Helmet](https://betterprogramming.pub/nodejs-express-helmet-aa58c09c55c5)
-- [Clean Architecture Node Use Case](https://github.com/royib/clean-architecture-node)
-- [Better way to testing Middlwares](https://javascript.plainenglish.io/how-to-unit-test-express-middleware-typescript-jest-c6a7ad166e74)
+## Chapter #8 - Authorization with JWT token
 - [JWT with Express](https://www.digitalocean.com/community/tutorials/nodejs-jwt-expressjs)
+## Boilerplate examples
+- [Express Template](https://github.com/vassalloandrea/express-template/)
+- [Node Boilerplate](https://github.com/santoshshinde2012/node-boilerplate)
+- [Bulletproof NodeJs](https://github.com/santiq/bulletproof-nodejs)
+- [Budget Note](https://github.com/bartosz-io/budget-node)
+- [Umbriel](https://github.com/Rocketseat/umbriel)
+- [Task Management](https://github.com/phatvo21/task-management)
+- [Hackathon Starter](https://github.com/sahat/hackathon-starter)
+## Others
+- [Write README.md](https://stackedit.io/app)
+- [TypeScript Decorators](https://stackoverflow.com/questions/49352943/how-to-get-parameters-name-within-decorators)
