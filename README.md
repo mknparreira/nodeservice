@@ -261,6 +261,8 @@ npm i -D @types/compression
 npm i uuid
 npm i -D @types/uuid
 
+npm i -D artillery
+
 ```
 # 10 - Future features
 ## Features
