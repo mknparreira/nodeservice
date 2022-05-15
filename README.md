@@ -295,6 +295,8 @@ npm i -D artillery
 - [Node Express Helmet](https://betterprogramming.pub/nodejs-express-helmet-aa58c09c55c5)
 ## Chapter #8 - Authorization with JWT token
 - [JWT with Express](https://www.digitalocean.com/community/tutorials/nodejs-jwt-expressjs)
+## Chapter #9 - Monitoring + Perfomance
+- [Artillery Examples](https://github.com/artilleryio/artillery-examples)
 ## Boilerplate examples
 - [Express Template](https://github.com/vassalloandrea/express-template/)
 - [Node Boilerplate](https://github.com/santoshshinde2012/node-boilerplate)
