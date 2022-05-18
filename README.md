@@ -293,6 +293,8 @@ npm i -D artillery
 ## Chapter #6 - Security Practices
 - [Brute Force Protectiion](https://medium.com/@animirr/brute-force-protection-node-js-examples-cd58e8bd9b8d)
 - [Node Express Helmet](https://betterprogramming.pub/nodejs-express-helmet-aa58c09c55c5)
+## Chapter #7 - Open API Documentation with Swagger
+- [Verify Swaaget file](https://www.blstsecurity.com/)
 ## Chapter #8 - Authorization with JWT token
 - [JWT with Express](https://www.digitalocean.com/community/tutorials/nodejs-jwt-expressjs)
 - [JWT best practices](https://blog.openreplay.com/jwt-authentication-best-practices)
