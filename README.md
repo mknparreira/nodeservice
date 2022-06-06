@@ -14,7 +14,8 @@ This project will be divided by phases:
 7. Open API Documentation with Swagger **(done)**
 8. Authorization with JWT token **(done)**
 9. Monitoring + Perfomance **(done)**
-10. Future issues
+10. Docker
+NN. Future features
 # 1 - Instalation + Configuration
 ## Features
 - Quick start
@@ -221,7 +222,6 @@ npm i -D @types/swagger-ui-express
 |---------|-------------|
 | [User](http://localhost:3000/api-docs/user/)  | User component documentation |
 | [Auth](http://localhost:3000/api-docs/auth/)  | Auth component documentation |
-
 # 8 - Authorization with JWT token
 ## Features
 - Integrated with JWT (Jason Web Tokens)
@@ -264,7 +264,11 @@ npm i -D @types/uuid
 npm i -D artillery
 
 ```
-# 10 - Future features
+# 10 - Docker
+## Features
+- Create the image
+- Separating MySQL dependency and the project through the docker-compose file
+# NN - Future features
 ## Features
 | Package | Description |
 |---------|-------------|
@@ -276,7 +280,6 @@ npm i -D artillery
 | [Blacklist JWT](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/security/expirejwt.md) | Chapter #8 - Authorization with JWT token |
 | Bcrypt | Chapter #6 - Security Practices |
 | [Cache API with Redis](https://javascript.plainenglish.io/how-to-cache-api-requests-with-redis-and-node-js-385cee0edff7) + HTTP Headers Expires and Cache-Control | Chapter #9 - Monitoring + Perfomance |
-
 # References
 ## Chapter #1 - Instalation + Configuration
 - [Libraries you should use for every Node Express project](https://dev.to/wizbuntu/top-15-libraries-you-should-use-for-every-node-express-backend-project-3k23)
@@ -302,6 +305,8 @@ npm i -D artillery
 - [JWT.io](https://jwt.io/)
 ## Chapter #9 - Monitoring + Perfomance
 - [Artillery Examples](https://github.com/artilleryio/artillery-examples)
+## Chapter #10 - Docker
+- [Docker example](https://www.schoolofnet.com/canal-direto-ao-ponto/trabalhando-com-docker-e-docker-compose-em-uma-apl/)
 ## Boilerplate examples
 - [Express Template](https://github.com/vassalloandrea/express-template/)
 - [Node Boilerplate](https://github.com/santoshshinde2012/node-boilerplate)
