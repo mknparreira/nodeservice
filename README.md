@@ -15,7 +15,7 @@ This project will be divided by phases:
 8. Authorization with JWT token **(done)**
 9. Monitoring + Perfomance **(done)**
 10. Docker
-NN. Future features
+11. Future features
 # 1 - Instalation + Configuration
 ## Features
 - Quick start
@@ -268,7 +268,7 @@ npm i -D artillery
 ## Features
 - Create the image
 - Separating MySQL dependency and the project through the docker-compose file
-# NN - Future features
+# 11 - Future features
 ## Features
 | Package | Description |
 |---------|-------------|
