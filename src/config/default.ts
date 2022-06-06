@@ -1,7 +1,8 @@
 import dotenv from 'dotenv';
 import NotFoundException from '../exceptions/notFound-exception';
 
-const result = dotenv.config();
+const envFile = process.env.NODE_ENV === 'production' ? './.env' : './.env.dev';
+const result = dotenv.config({ path: envFile });
 
 if (result?.error) throw new NotFoundException('Could not find .env file');
 

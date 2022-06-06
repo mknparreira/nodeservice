@@ -7,9 +7,9 @@
       "node": ">=14.17.3"
    },
    "scripts": {
-      "start": "nodemon",
+      "start": "SET NODE_ENV=development&& nodemon",
       "start:inspect": "nodemon --inspect",
-      "start:prod": "npm run build && node ./dist/server.js",
+      "start:prod": "npm run build && SET NODE_ENV=production&& node ./dist/server.js",
       "build": "npm run clear && npx tsc",
       "test": "jest",
       "lint": "npm run pretty && npx eslint src/**/*.ts --fix",
