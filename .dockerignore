@@ -1,0 +1,16 @@
+.vscode
+artillery/
+logs/
+node_modules/
+npm-debug.log
+dist/
+
+# Cache used by TypeScript's incremental build
+*.tsbuildinfo
+
+#Ignoring git and cache folders
+.git
+.cache
+
+#Ignoring all the markdown and class files
+*.md
