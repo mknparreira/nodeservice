@@ -14,7 +14,7 @@ This project will be divided by phases:
 7. Open API Documentation with Swagger **(done)**
 8. Authorization with JWT token **(done)**
 9. Monitoring + Perfomance **(done)**
-10. Docker
+10. Docker **(done)**
 11. Future features
 # 1 - Instalation + Configuration
 ## Features
@@ -266,8 +266,8 @@ npm i -D artillery
 ```
 # 10 - Docker
 ## Features
-- Create the image
-- Separating MySQL dependency and the project through the docker-compose file
+- Create Dockerfile
+- Separating MySQL dependency to the project through the docker-compose file
 # 11 - Future features
 ## Features
 | Package | Description |
